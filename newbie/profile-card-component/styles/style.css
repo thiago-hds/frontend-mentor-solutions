@@ -1,10 +1,11 @@
 /* ---------- general styles ---------- */
+
 :root {
 	--primary-color: hsl(185, 75%, 39%);
-	--secondary-color: white;
+	--secondary-color: #fff;
 	--accent-font-color: hsl(229, 23%, 23%);
 	--regular-font-color: hsl(227, 10%, 46%);
-	--profile-card-stats-rule-color: hsl(0, 0%, 59%);
+	--profile-card-stats-rule-color: hsl(0, 0%, 59%, 0.4);
 }
 
 * {
@@ -23,47 +24,83 @@ html {
 	font-family: 'Kumbh Sans', sans-serif;
 }
 
-p {
-	font-weight: 400;
-	font-size: 1.2em;
-}
-
-h1,
+.name,
 .profile-stats p:first-child {
 	color: var(--accent-font-color);
-	font-size: 2em;
+	font-size: 1.8rem;
 	font-weight: 700;
 }
 
-h1 .age {
+.age,
+.location,
+.profile-stats p:last-child {
+	color: var(--regular-font-color);
 	font-weight: 400;
 }
 
+.name {
+	margin-right: 1rem;
+}
+
+.age {
+	font-size: 1.8rem;
+}
+
+.location {
+	font-size: 1.4rem;
+	margin-bottom: 2.5rem;
+}
+
 .profile-stats p:last-child {
-	letter-spacing: 0.2rem;
+	letter-spacing: 0.1rem;
 }
 
-.profile-main,
-.profile-stats div {
-	text-align: center;
-}
-
+.user-info,
+.location,
+.profile-stats div,
 footer {
 	text-align: center;
 }
 
-footer a {
-	color: hsl(228, 45%, 44%);
+footer {
+	font-size: 1.2rem;
+	color: var(--secondary-color);
+}
+
+footer a:link {
+	color: var(--accent-font-color);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
 }
 
 /* ---------- layout ---------- */
 
 body {
+	display: flex;
+	flex-direction: column;
+
 	height: 100vh;
-	margin: 8px;
+	padding: 8px;
+}
+
+main {
+	flex: 1 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer {
+	flex: 0 0;
 }
 
 .profile {
+	flex: 1;
+	min-width: 22rem;
 	max-width: 35rem;
 	border-radius: 12px;
 	margin: 0 auto;
@@ -72,8 +109,8 @@ body {
 
 .profile-top {
 	position: relative;
-	min-height: 15rem;
-	margin-bottom: 6rem;
+	min-height: 14.5rem;
+	margin-bottom: 8rem;
 }
 
 .profile-top .picture {
@@ -83,11 +120,12 @@ body {
 	transform: translate(-50%, 50%);
 }
 
-.profile-main {
-	border-bottom: 1px solid #000;
+.user-info {
+	margin-bottom: 1rem;
 }
 
 .profile-stats {
+	border-top: 1px solid var(--profile-card-stats-rule-color);
 	display: flex;
 	justify-content: space-around;
 	padding: 2rem 0;
@@ -102,10 +140,10 @@ body {
 	background-image: url('../images/bg-pattern-top.svg'),
 		url('../images/bg-pattern-bottom.svg');
 	background-repeat: no-repeat;
-	/* background-size: 100%; */
-	background-position: top left, bottom right;
+	background-position: right 50vw bottom 50vh, left 50vw top 50vh;
 	background-color: var(--primary-color);
 }
+
 .profile {
 	background: var(--secondary-color);
 }
@@ -116,8 +154,8 @@ body {
 /* ---------- components  ---------- */
 
 .picture {
-	height: 10rem;
-	width: 10rem;
+	height: 10.6rem;
+	width: 10.6rem;
 	background-color: var(--secondary-color);
 	border: 5px solid var(--secondary-color);
 	border-radius: 50%;

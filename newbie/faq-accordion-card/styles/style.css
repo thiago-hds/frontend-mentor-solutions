@@ -1,0 +1,76 @@
+:root {
+	--bg-gradient-start-color: hsl(273, 75%, 66%);
+	--bg-gradient-end-color: hsl(240, 73%, 65%);
+	--card-bg-color: hsl(0, 0%, 100%);
+	--question-regular-text-color: hsl(237, 12%, 33%);
+	--question-selected-text-color: hsl(238, 29%, 16%);
+	--question-hover-text-color: hsl(14, 88%, 65%);
+	--answer-regular-text-color: hsl(240, 6%, 50%);
+	--divider-color: hsl(240, 5%, 91%);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	height: 100vh;
+	background: rgb(101, 101, 231);
+	background: linear-gradient(
+		0deg,
+		var(--bg-gradient-end-color) 0%,
+		var(--bg-gradient-start-color) 50%
+	);
+}
+
+main {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	position: relative;
+	background: var(--card-bg-color);
+	box-shadow: 2px 28px 45px -19px var(--question-selected-text-color);
+	min-width: 20rem;
+	max-width: 30rem;
+	border-radius: 2rem;
+	padding: 4.5rem 2rem;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+.card::before {
+	content: '';
+	display: block;
+
+	position: absolute;
+	top: -13.4rem;
+	left: 50%;
+	transform: translateX(-55%);
+
+	background: url('../images/illustration-woman-online-mobile.svg') no-repeat
+		center;
+	background-size: contain;
+	height: 25rem;
+	width: 25rem;
+}
+
+.attribution {
+	flex: 0;
+
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

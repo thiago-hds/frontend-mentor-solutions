@@ -3,7 +3,7 @@
 	--bg-gradient-end-color: hsl(240, 73%, 65%);
 	--card-bg-color: hsl(0, 0%, 100%);
 	--question-regular-text-color: hsl(237, 12%, 33%);
-	--question-selected-text-color: hsl(238, 29%, 16%);
+	--question-active-text-color: hsl(238, 29%, 16%);
 	--question-hover-text-color: hsl(14, 88%, 65%);
 	--answer-regular-text-color: hsl(240, 6%, 50%);
 	--divider-color: hsl(240, 5%, 91%);
@@ -21,6 +21,7 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
+	margin: 0.8rem;
 
 	height: 100vh;
 	background: rgb(101, 101, 231);
@@ -41,11 +42,11 @@ main {
 .card {
 	position: relative;
 	background: var(--card-bg-color);
-	box-shadow: 2px 28px 45px -19px var(--question-selected-text-color);
-	min-width: 20rem;
-	max-width: 30rem;
+	box-shadow: 2px 28px 45px -19px var(--question-active-text-color);
+	/* min-width: 20rem; */
+	width: 34rem;
 	border-radius: 2rem;
-	padding: 4.5rem 2rem;
+	padding: 12rem 2.2rem 2rem;
 	font-family: 'Kumbh Sans', sans-serif;
 }
 
@@ -54,20 +55,71 @@ main {
 	display: block;
 
 	position: absolute;
-	top: -13.4rem;
+	top: -10rem;
 	left: 50%;
 	transform: translateX(-55%);
 
-	background: url('../images/illustration-woman-online-mobile.svg') no-repeat
-		center;
-	background-size: contain;
-	height: 25rem;
+	background-image: url('../images/illustration-woman-online-mobile.svg'),
+		url('../images/bg-pattern-mobile.svg');
+	background-position: top, left 29px bottom;
+	background-repeat: no-repeat;
+	background-size: 100%, 88%;
+	height: 20rem;
 	width: 25rem;
 }
 
-.attribution {
-	flex: 0;
+h3 {
+	flex-grow: 1;
+	font-weight: 400;
+	font-size: 1.4rem;
+	color: var(--question-regular-text-color);
+}
 
+h2,
+.active h3 {
+	font-weight: 900;
+	color: var(--question-active-text-color);
+}
+
+h2 {
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 3rem;
+}
+
+section {
+	padding: 1rem 0;
+	border-bottom: 1px solid var(--divider-color);
+}
+
+.question {
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.answer {
+	display: none;
+}
+
+.active .answer {
+	display: block;
+}
+
+.answer {
+	color: var(--answer-regular-text-color);
+	font-size: 1.1rem;
+}
+
+.icon-arrow {
+	display: inline-block;
+	background: url('../images/icon-arrow-down.svg') no-repeat;
+	background-size: contain;
+	width: 1rem;
+	height: 1rem;
+}
+
+.attribution {
 	font-size: 11px;
 	text-align: center;
 }

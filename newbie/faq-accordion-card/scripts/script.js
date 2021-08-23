@@ -7,8 +7,8 @@ const colapseAllQuestions = function () {
 };
 
 const expandQuestion = function (question) {
-	colapseAllQuestions();
-	question.closest('section').classList.toggle('active');
+	// colapseAllQuestions();
+	question.classList.toggle('active');
 };
 
 allQuestions.forEach(question => {

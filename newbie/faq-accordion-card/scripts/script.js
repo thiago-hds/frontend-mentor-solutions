@@ -2,15 +2,14 @@ const allQuestions = document.querySelectorAll('.question');
 
 const colapseAllQuestions = function () {
 	allQuestions.forEach(question => {
-		question.closest('section').classList.remove('active');
+		question.closest('details').removeAttribute('open');
 	});
 };
 
-const expandQuestion = function (question) {
-	// colapseAllQuestions();
-	question.classList.toggle('active');
+const activateQuestion = function (question) {
+	colapseAllQuestions();
 };
 
 allQuestions.forEach(question => {
-	question.addEventListener('click', expandQuestion.bind(null, question));
+	question.addEventListener('click', activateQuestion.bind(null, question));
 });

@@ -123,10 +123,11 @@ details {
 	height: 1rem;
 	background: url('../images/icon-arrow-down.svg') no-repeat;
 	background-size: contain;
+	transition: transform 0.3s;
 }
 
 details[open] .icon-arrow {
-	transform: rotate(180deg);
+	transform: rotate(-180deg);
 }
 
 .attribution {
@@ -142,7 +143,7 @@ details[open] .icon-arrow {
 
 @media screen and (min-width: 900px) {
 	body {
-		margin: 0 4rem;
+		margin: 0 6rem;
 	}
 	.card {
 		width: 92rem;
@@ -158,29 +159,24 @@ details[open] .icon-arrow {
 	}
 
 	.card::before {
-		content: none;
+		content: '';
+		position: absolute;
+
+		width: 20rem;
+		background: none;
+		background: url('../images/illustration-box-desktop.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		left: 1.2rem;
+		top: 21.4rem;
 	}
 
-	.none {
-		/* display: none; */
-		left: -10rem;
-		top: 50%;
-		transform: translateY(-45%);
-
-		width: 44rem;
-		height: 44rem;
-		/* background-image: url('../images/illustration-woman-online-desktop.svg'),
-			url('../images/bg-pattern-desktop.svg'),
-			url('../images/illustration-box-desktop.svg'); */
-		background-image: url('../images/illustration-woman-online-desktop.svg'),
-			url('../images/bg-pattern-desktop.svg');
-
-		background-position: top, left 29px bottom;
-		background-repeat: no-repeat;
-		background-size: 100%, 88%;
+	h2 {
+		text-align: left;
 	}
 
 	.questions-wrapper {
-		margin-left: 50rem;
+		margin-left: 46rem;
+		width: 30rem;
 	}
 }

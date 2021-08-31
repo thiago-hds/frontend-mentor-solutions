@@ -8,6 +8,7 @@
 	--answer-regular-text-color: hsl(240, 6%, 50%);
 	--divider-color: hsl(240, 5%, 91%);
 }
+/* -- general styles -- */
 
 * {
 	box-sizing: border-box;
@@ -23,13 +24,15 @@ body {
 	display: flex;
 	flex-direction: column;
 
+	font-family: 'Kumbh Sans', sans-serif;
+
 	min-height: 100vh;
 	margin: 0.8rem;
-	background: rgb(101, 101, 231);
+
 	background: linear-gradient(
 		0deg,
 		var(--bg-gradient-end-color) 0%,
-		var(--bg-gradient-start-color) 50%
+		var(--bg-gradient-start-color) 80%
 	);
 }
 
@@ -44,12 +47,10 @@ main {
 	position: relative;
 
 	width: 34rem;
-	/* padding: 12rem 2.2rem 4rem; */
-	padding: 5rem;
+	padding: 2.5rem;
 	margin-top: 14rem;
-	background: var(--card-bg-color);
 
-	font-family: 'Kumbh Sans', sans-serif;
+	background: var(--card-bg-color);
 
 	border-radius: 2rem;
 	box-shadow: 2px 28px 45px -19px var(--question-active-text-color);
@@ -57,12 +58,10 @@ main {
 
 .card::before {
 	content: '';
-	display: block;
 
 	position: absolute;
 	top: -10rem;
 	left: 50%;
-	transform: translateX(-55%);
 
 	width: 25rem;
 	height: 20rem;
@@ -71,7 +70,16 @@ main {
 	background-position: top, left 29px bottom;
 	background-repeat: no-repeat;
 	background-size: 100%, 88%;
+
+	transform: translateX(-55%);
 }
+
+.questions-container {
+	width: 30rem;
+	margin-top: 8.4rem;
+}
+
+/* -- headings -- */
 
 h2,
 details[open] h3 {
@@ -82,8 +90,8 @@ details[open] h3 {
 h2 {
 	margin-bottom: 3rem;
 
-	text-align: center;
 	font-size: 3rem;
+	text-align: center;
 }
 
 .question h3 {
@@ -92,6 +100,8 @@ h2 {
 	font-weight: 400;
 	font-size: 1.4rem;
 }
+
+/* -- questions -- */
 
 details {
 	padding: 1rem 0;
@@ -111,9 +121,11 @@ details {
 	color: var(--question-hover-text-color);
 }
 
+/* -- answers -- */
+
 .answer {
-	font-size: 1.1rem;
 	color: var(--answer-regular-text-color);
+	font-size: 1.1rem;
 }
 
 .icon-arrow {
@@ -130,26 +142,39 @@ details[open] .icon-arrow {
 	transform: rotate(-180deg);
 }
 
+/* -- footer -- */
+
 .attribution {
 	padding: 1rem 0;
+	color: var(--card-bg-color);
 
-	font-size: 11px;
+	font-size: 1.2rem;
 	text-align: center;
 }
 
-.attribution a {
-	color: hsl(228, 45%, 44%);
+.attribution a:link {
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.attribution a:hover {
+	border-bottom: 1px solid;
+}
+
+.attribution a:visited {
+	color: var(--question-hover-text-color);
 }
 
 @media screen and (min-width: 900px) {
 	body {
 		margin: 0 6rem;
 	}
+
 	.card {
 		width: 92rem;
 		height: 50.8rem;
 		margin: 0;
-		/* padding: 6rem 10rem 6rem 49rem; */
 
 		background-image: url('../images/illustration-woman-online-desktop.svg'),
 			url('../images/bg-pattern-desktop.svg');
@@ -164,7 +189,7 @@ details[open] .icon-arrow {
 
 		width: 20rem;
 		background: none;
-		background: url('../images/illustration-box-desktop.svg');
+		background-image: url('../images/illustration-box-desktop.svg');
 		background-repeat: no-repeat;
 		background-size: contain;
 		left: 1.2rem;
@@ -175,8 +200,8 @@ details[open] .icon-arrow {
 		text-align: left;
 	}
 
-	.questions-wrapper {
+	.questions-container {
+		margin-top: 4.2rem;
 		margin-left: 46rem;
-		width: 30rem;
 	}
 }

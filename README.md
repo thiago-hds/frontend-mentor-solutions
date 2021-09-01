@@ -21,3 +21,9 @@ Solutions for challenges from [Frontend Mentor](https://www.frontendmentor.io)
 -   [Solution](https://www.frontendmentor.io/solutions/flexbox-solution-QuuwAzF9a)
 -   [Code](./newbie/profile-card-component)
 -   [Live](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/profile-card-component/)
+
+### [FAQ Accordion Card ](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ)
+
+-   [Solution]()
+-   [Code](./newbie/faq-accordion-card)
+-   [Live](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/faq-accordion-card/)

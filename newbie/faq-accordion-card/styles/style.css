@@ -30,9 +30,8 @@ body {
 	margin: 0.8rem;
 
 	background: linear-gradient(
-		0deg,
-		var(--bg-gradient-end-color) 0%,
-		var(--bg-gradient-start-color) 80%
+		var(--bg-gradient-start-color),
+		var(--bg-gradient-end-color)
 	);
 }
 
@@ -47,6 +46,7 @@ main {
 	position: relative;
 
 	width: 34rem;
+	height: 50rem;
 	padding: 2.5rem;
 	margin-top: 14rem;
 
@@ -166,7 +166,7 @@ details[open] .icon-arrow {
 	color: var(--question-hover-text-color);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
 	body {
 		margin: 0 6rem;
 	}

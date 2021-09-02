@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: []()
+-   Solution URL: [https://www.frontendmentor.io/solutions/faq-accordion-html-css-flexbox-FtB9wUJk5](https://www.frontendmentor.io/solutions/faq-accordion-html-css-flexbox-FtB9wUJk5)
 -   Live Site URL: [https://thiago-hds.github.io/frontend-mentor-solutions/newbie/faq-accordion-card/](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/faq-accordion-card/)
 
 ## My process

@@ -1,12 +1,9 @@
 :root {
 	--main-color: hsl(300, 43%, 22%);
 	--accent-color: hsl(333, 80%, 67%);
-	--gray-color-1: hsl(303, 10%, 53%);
-	--gray-color-2: hsl(300, 24%, 96%);
+	--gray-color: hsl(303, 10%, 53%);
+	--rating-card-color: hsl(300, 24%, 96%);
 	--background-color: hsl(0, 0%, 100%);
-
-	--margin-sm: 2rem;
-	--margin-lg: 3rem;
 }
 
 * {
@@ -33,9 +30,10 @@ body {
 
 main {
 	display: grid;
-
-	max-width: 60rem;
-	margin: 0 auto;
+	grid-template-columns: fit-content(60rem);
+	justify-content: center;
+	row-gap: 3rem;
+	margin-bottom: 3rem;
 }
 
 .no-bullets {
@@ -46,43 +44,39 @@ main {
 
 /* HEADER */
 .header {
-	margin: 7.8rem 0 var(--margin-lg);
+	margin-top: 7.8rem;
 	text-align: center;
 }
 
 .header__heading {
-	margin-bottom: var(--margin-lg);
+	margin-bottom: 3rem;
 
 	color: var(--main-color);
 	font-size: 3.2rem;
 	font-weight: 700;
-
 	line-height: 1;
 }
 
 .header__paragraph {
-	color: var(--gray-color-1);
+	color: var(--gray-color);
 	font-size: 1.4rem;
 	font-weight: 500;
 	line-height: 1.7;
 }
 
 /* RATINGS */
-.ratings {
-	margin-bottom: var(--margin-lg);
-}
-
 .rating-card {
 	padding: 2rem 0;
-	margin-bottom: var(--margin-sm);
-	background: var(--gray-color-2);
-
+	background: var(--rating-card-color);
 	text-align: center;
-
 	border-radius: 0.5rem;
 }
 
-/* TODO better way to add star svgs? */
+.rating-card--first,
+.rating-card--middle {
+	margin-bottom: 2rem;
+}
+
 .rating-card::before {
 	content: '';
 	display: block;
@@ -101,28 +95,38 @@ main {
 }
 
 /* TESTIMONIALS */
+
 .testimonials {
-	margin-bottom: 2rem;
+	display: grid;
 }
 
 .testimonial-card {
 	padding: 3.8rem 3rem;
-	margin-bottom: var(--margin-sm);
 	background: var(--main-color);
 	border-radius: 1rem;
+}
+
+.testimonial-card--first,
+.testimonial-card--middle {
+	margin-bottom: 2rem;
 }
 
 .testimonial-card__image {
 	float: left;
 	width: 4rem;
+	height: 4rem;
 	margin-right: 2.5rem;
 	border-radius: 50%;
 }
 
+.testimonial-card__heading,
+.testimonial-card__quote {
+	font-size: 1.3rem;
+	color: var(--background-color);
+}
+
 .testimonial-card__heading {
 	margin: 0.5rem 0;
-	color: var(--gray-color-2);
-	font-size: 1.3rem;
 	font-weight: 700;
 }
 
@@ -135,15 +139,13 @@ main {
 
 .testimonial-card__quote {
 	margin: 0;
-	color: var(--background-color);
-	font-size: 1.3rem;
 	font-weight: 500;
 	line-height: 1.5;
 }
 
 /* ATTRIBUTION  */
 .attribution {
-	padding: 0.5rem 0;
+	margin-bottom: 0.5rem;
 	color: var(--main-color);
 	text-align: center;
 	font-size: 1rem;
@@ -164,18 +166,20 @@ main {
 @media screen and (min-width: 925px) {
 	/* ---- GENERAL DESKTOP STYLES ---- */
 	body {
-		margin: 0;
 		background: url('../images/bg-pattern-top-desktop.svg') top left / 35%
 				no-repeat,
 			url('../images/bg-pattern-bottom-desktop.svg') bottom right / 80%
 				no-repeat;
+		/* max-width: 111rem; */
 	}
 
 	main {
 		grid-template-columns: 1fr 1.5fr;
 		row-gap: 7rem;
+		column-gap: 0;
 
 		max-width: 111rem;
+		margin: 0 auto;
 	}
 
 	/* ---- HEADER DESKTOP ---- */
@@ -184,11 +188,12 @@ main {
 		grid-column: 1 / 2;
 		text-align: left;
 		margin-bottom: 0;
+		margin-top: 7.8rem;
 	}
 
 	.header__heading {
 		font-size: 4.8rem;
-		margin-bottom: var(--margin-sm);
+		margin-bottom: 2rem;
 	}
 
 	/* ---- RATINGS DESKTOP ---- */
@@ -217,10 +222,6 @@ main {
 		transform: translateX(-4rem);
 	}
 
-	.rating-card--last {
-		margin: 0;
-	}
-
 	.rating-card::before {
 		justify-self: right;
 		margin: 0;
@@ -233,10 +234,10 @@ main {
 	/* ---- TESTIMONIALS DESKTOP ---- */
 
 	.testimonials {
-		display: grid;
 		grid-column: 1 / -1;
+
 		grid-template-columns: repeat(3, 1fr);
-		gap: var(--margin-sm);
+		column-gap: 2rem;
 
 		margin-bottom: 6rem;
 	}

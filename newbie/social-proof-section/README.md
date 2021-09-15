@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
+-   Solution URL: [Here](https://www.frontendmentor.io/solutions/social-proof-section-with-htmlcss-mobilefirst-bem-and-css-grid-Xyg4mrRKW)
 -   Live Site URL: [Here](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/social-proof-section/)
 
 ## My process

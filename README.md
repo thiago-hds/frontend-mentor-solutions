@@ -27,3 +27,9 @@ Solutions for challenges from [Frontend Mentor](https://www.frontendmentor.io)
 -   [Solution](https://www.frontendmentor.io/solutions/faq-accordion-html-css-flexbox-FtB9wUJk5)
 -   [Code](./newbie/faq-accordion-card)
 -   [Live](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/faq-accordion-card/)
+
+### [Social proof section](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA)
+
+-   [Solution](https://www.frontendmentor.io/solutions/social-proof-section-with-htmlcss-mobilefirst-bem-and-css-grid-Xyg4mrRKW)
+-   [Code](./newbie/social-proof-section)
+-   [Live](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/social-proof-section/)

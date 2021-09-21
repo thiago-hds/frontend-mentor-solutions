@@ -33,3 +33,9 @@ Solutions for challenges from [Frontend Mentor](https://www.frontendmentor.io)
 -   [Solution](https://www.frontendmentor.io/solutions/social-proof-section-with-htmlcss-mobilefirst-bem-and-css-grid-Xyg4mrRKW)
 -   [Code](./newbie/social-proof-section)
 -   [Live](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/social-proof-section/)
+
+### [Article preview component](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
+
+-   [Solution](https://www.frontendmentor.io/solutions/article-preview-component-htmlcss-grid-EcRX5YrH1)
+-   [Code](./newbie/article-preview-component)
+-   [Live](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/article-preview-component/)

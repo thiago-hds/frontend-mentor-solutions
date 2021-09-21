@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Here](https://www.frontendmentor.io/solutions/article-preview-component-htmlcss-grid-EcRX5YrH1)
+-   Live Site URL: [Here](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/article-preview-component/)
 
 ## My process
 

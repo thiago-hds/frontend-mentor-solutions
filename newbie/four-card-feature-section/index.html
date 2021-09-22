@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Four card feature section</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+			rel="stylesheet"
+		/>
 
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
+		<link rel="stylesheet" href="styles/style.css" />
 
-  Supervisor
-  Monitors activity to identify project roadblocks
+		<title>Frontend Mentor | Four feature-card feature section</title>
+	</head>
+	<body>
+		<main>
+			<h1 class="heading">
+				Reliable, efficient delivery
+				<strong class="heading__strong">Powered by Technology</strong>
+			</h1>
 
-  Team Builder
-  Scans our talent network to create the optimal team for your project
+			<p class="description">
+				Our Artificial Intelligence powered tools use millions of
+				project data points to ensure that your project is successful
+			</p>
 
-  Karma
-  Regularly evaluates our talent to ensure quality
+			<div class="features">
+				<div class="feature-card feature-card--cyan feature-card--left">
+					<h2 class="feature-card__heading">Supervisor</h2>
+					<p class="feature-card__description">
+						Monitors activity to identify project roadblocks
+					</p>
+				</div>
 
-  Calculator
-  Uses data from past projects to provide better delivery estimates
+				<div class="feature-card feature-card--red">
+					<h2 class="feature-card__heading">Team Builder</h2>
+					<p class="feature-card__description">
+						Scans our talent network to create the optimal team for
+						your project
+					</p>
+				</div>
 
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+				<div class="feature-card feature-card--orange">
+					<h2 class="feature-card__heading">Karma</h2>
+					<p class="feature-card__description">
+						Regularly evaluates our talent to ensure quality
+					</p>
+				</div>
+
+				<div
+					class="feature-card feature-card--blue feature-card--right"
+				>
+					<h2 class="feature-card__heading">Calculator</h2>
+					<p class="feature-card__description">
+						Uses data from past projects to provide better delivery
+						estimates
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<p class="attribution">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					>Frontend Mentor</a
+				>. Coded by
+				<a href="https://github.com/thiago-hds">Thiago Santos</a>.
+			</p>
+		</footer>
+	</body>
 </html>

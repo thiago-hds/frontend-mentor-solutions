@@ -1,0 +1,118 @@
+/* ### Primary
+
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%) */
+
+/* - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600 */
+
+:root {
+	--very-dark-blue: hsl(234, 12%, 34%);
+	--grayish-blue: hsl(229, 6%, 66%);
+	--very-light-gray: hsl(0, 0%, 98%);
+}
+
+/* ---- GENERAL STYLES ---- */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: var(--very-light-gray);
+
+	font-family: 'Poppins', sans-serif;
+}
+
+main {
+	/* display: grid; */
+	/* grid-template-rows: 1fr auto; */
+}
+
+/* ---- TYPOGRAPHY ---- */
+
+.heading__strong,
+.feature-card__heading {
+	color: var(--very-dark-blue);
+	font-weight: 600;
+}
+
+.description,
+.feature-card__description {
+	color: var(--grayish-blue);
+	font-weight: 400;
+}
+
+.heading {
+	font-weight: 200;
+	font-size: 2.2rem;
+}
+
+.description {
+	font-size: 1.5rem;
+}
+
+.feature-card__heading {
+	/* color: var(--very-dark-blue); */
+	font-size: 1.8rem;
+}
+
+.feature-card__description {
+	/* color: var(--grayish-blue); */
+	font-size: 1.2rem;
+}
+
+/* ---- TOP SECTION STYLES ---- */
+
+.heading {
+}
+
+.heading__strong {
+	display: block;
+}
+
+/* ---- FEATURES SECTION STYLES ---- */
+
+.features {
+	display: grid;
+	gap: 20px;
+}
+
+.feature-card {
+	width: 40rem;
+	min-height: 200px;
+
+	padding: 20px;
+	/* background: green; */
+	border-top: 4px solid var(--card-color, var(--very-dark-blue));
+
+	border-radius: 10px;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card--cyan {
+	--card-color: hsl(180, 62%, 55%);
+}
+
+.feature-card--red {
+	--card-color: hsl(0, 78%, 62%);
+}
+.feature-card--orange {
+	--card-color: hsl(34, 97%, 64%);
+}
+.feature-card--blue {
+	--card-color: hsl(212, 86%, 64%);
+}

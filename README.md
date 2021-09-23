@@ -39,3 +39,9 @@ Solutions for challenges from [Frontend Mentor](https://www.frontendmentor.io)
 -   [Solution](https://www.frontendmentor.io/solutions/article-preview-component-htmlcss-grid-EcRX5YrH1)
 -   [Code](./newbie/article-preview-component)
 -   [Live](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/article-preview-component/)
+
+### [Four card feature section](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK)
+
+-   [Solution](https://www.frontendmentor.io/solutions/four-card-feature-section-css-grid-cwDweBEws)
+-   [Code](./newbie/four-card-feature-section)
+-   [Live](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/four-card-feature-section/)

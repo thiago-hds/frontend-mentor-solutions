@@ -1,0 +1,238 @@
+/* 
+## Colors
+
+### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weights: 300, 400, 600 */
+
+:root {
+	/* colors */
+	--desaturated-red: hsl(0, 36%, 70%);
+	--soft-red: hsl(0, 93%, 68%);
+	--dark-grayish-red: hsl(0, 6%, 24%);
+	--white: #fff;
+	--gradient-button: linear-gradient(
+		135deg,
+		hsl(0, 80%, 86%),
+		hsl(0, 74%, 74%)
+	);
+	/* TODO what is it for? */
+	--other-gradient: linear-gradient(
+		135deg,
+		hsl(0, 0%, 100%),
+		hsl(0, 100%, 98%)
+	);
+
+	--font-family: 'Josefin Sans', sans-serif;
+	--hero-img: url('../images/hero-mobile.jpg');
+
+	/* font-sizes */
+	--fs-heading: 4rem;
+	--fs-info: 1.4rem;
+
+	/* font-weight */
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-semi-bold: 600;
+	/* TODO add gradients from style guide */
+}
+
+/* TODO figure out breakpoint */
+@media screen and (min-width: 900px) {
+	:root {
+		--fs-info: 1.6rem;
+		--hero-img: url('../images/hero-desktop.jpg');
+	}
+}
+
+/* ---- GENERAL STYLES ---- */
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--font-family);
+	background: var(--white);
+}
+
+main {
+	display: grid;
+}
+
+.hidden {
+	display: none;
+}
+
+/* ---- HEADER STYLES ---- */
+header {
+	padding: 32px 45px;
+}
+
+.logo {
+	width: 10rem;
+}
+
+/* ---- HERO STYLES ---- */
+.hero {
+	aspect-ratio: 375 / 250; /* keeps the same aspect ratio as the background image */
+	padding-top: 66.66%; /* fallback */
+
+	background: var(--hero-img) center center / cover no-repeat
+		var(--desaturated-red);
+}
+
+/* ---- HEADING STYLES ---- */
+
+.heading {
+	max-width: 10ch;
+	margin: 6rem auto 1.5rem;
+
+	color: var(--desaturated-red);
+	font-size: var(--fs-heading);
+	font-weight: var(--fw-light);
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1rem;
+}
+
+.heading__important {
+	display: block;
+	color: var(--dark-grayish-red);
+	font-weight: var(--fw-semi-bold);
+}
+
+.info-text {
+	max-width: 30rem;
+	margin: 0 auto 3rem;
+
+	color: var(--desaturated-red);
+	font-size: var(--fs-info);
+	font-weight: var(--fw-regular);
+	line-height: 1.5;
+	text-align: center;
+}
+
+/* ---- FORM STYLES ---- */
+
+.form {
+	/* box-sizing: content-box; */
+	position: relative;
+	margin: 0 auto 5rem;
+}
+
+.input-email,
+.btn-submit {
+	height: 4.6rem;
+}
+
+.input-email {
+	padding: 0 2rem;
+	border: 1px solid var(--desaturated-red);
+	width: 30rem;
+
+	color: var(--desaturated-red);
+	font-weight: var(--fw-regular);
+	font-family: var(--font-family);
+
+	border-radius: 50px;
+}
+
+.btn-submit {
+	position: absolute;
+	right: 0;
+	padding: 0 2.5rem;
+	border: none;
+	background: var(--gradient-button);
+	border-radius: 100px;
+	box-shadow: 0 10px 25px var(--desaturated-red);
+	cursor: pointer;
+}
+
+/* TODO active background for button */
+.btn-submit:hover {
+	/* background: var(--other-gradient), var(gra); */
+}
+
+/* TODO default outline on focus looks bad */
+.input-email:focus,
+.btn-submit:focus {
+	/* outline: 1px solid var(--desaturated-red);asd */
+	outline: none;
+}
+
+/* ----ATTRIBUTION -STYLES ---- */
+.attribution {
+	font-size: 1.1rem;
+	color: var(--desaturated-red);
+	padding: 1rem;
+	text-align: center;
+}
+
+.attribution__link:link,
+.attribution__link:visited {
+	color: var(--dark-grayish-red);
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+@media screen and (min-width: 900px) {
+	body {
+		height: 100vh;
+	}
+
+	main,
+	.attribution {
+		max-width: 40rem;
+	}
+
+	/* .heading {
+		margin: 6rem 0 1.5rem;
+	}
+
+	.info-text {
+		margin: 0 0 3rem;
+	}
+
+	.attribution {
+		text-align: left;
+	} */
+
+	.hero {
+		/* float: right; */
+		height: 100%;
+		width: 40rem;
+		aspect-ratio: none;
+	}
+
+	.heading {
+		color: green;
+	}
+}

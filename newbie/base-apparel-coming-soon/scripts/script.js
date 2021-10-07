@@ -7,11 +7,13 @@ const invalidEmailMessage = 'Please provide a valid email';
 const hideEmailError = function () {
 	emailErrorSpan.textContent = '';
 	emailErrorSpan.classList.add('hidden');
+	emailInput.classList.remove('input--error');
 };
 
 const showEmailError = function () {
 	emailErrorSpan.textContent = invalidEmailMessage;
 	emailErrorSpan.classList.remove('hidden');
+	emailInput.classList.add('input--error');
 };
 
 emailInput.addEventListener('input', function () {
@@ -29,4 +31,4 @@ form.addEventListener('submit', function (e) {
 	}
 });
 
-form.setAttribute('novalidate');
+form.setAttribute('novalidate', true);

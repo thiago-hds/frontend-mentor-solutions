@@ -28,40 +28,42 @@
 
 :root {
 	/* colors */
-	--desaturated-red: hsl(0, 36%, 70%);
-	--soft-red: hsl(0, 93%, 68%);
-	--dark-grayish-red: hsl(0, 6%, 24%);
-	--white: #fff;
-	--gradient-button: linear-gradient(
+	--primary-color: hsl(0, 36%, 70%);
+	--gray-color: hsl(0, 6%, 24%);
+	--error-color: hsl(0, 93%, 68%);
+	--button-hover-color: hsl(0, 80%, 86%);
+	--focus-shadow-color: hsla(0, 36%, 70%, 0.5);
+
+	/* gradients */
+	--button-gradient: linear-gradient(
 		135deg,
 		hsl(0, 80%, 86%),
 		hsl(0, 74%, 74%)
 	);
-	/* TODO what is it for? */
-	--other-gradient: linear-gradient(
+	--body-background-gradient: linear-gradient(
 		135deg,
 		hsl(0, 0%, 100%),
 		hsl(0, 100%, 98%)
 	);
 
+	/* font */
 	--font-family: 'Josefin Sans', sans-serif;
-	--hero-img: url('../images/hero-mobile.jpg');
 
 	/* font-weight */
 	--fw-light: 300;
 	--fw-regular: 400;
 	--fw-semi-bold: 600;
-
-	--content-width: 30rem;
-	/* TODO add gradients from style guide */
 }
 
-/* ---- GENERAL STYLES ---- */
-
+/* ---- GENERAL STYLES AND UTILITY ---- */
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+}
+
+*:focus {
+	outline: 1px dotted;
 }
 
 html {
@@ -69,26 +71,30 @@ html {
 }
 
 body {
+	background: var(--body-background-gradient);
+	font-family: var(--font-family);
+}
+
+.hidden {
+	visibility: hidden !important;
+}
+
+/* ---- PAGE LAYOUT ---- */
+body {
 	display: grid;
-	justify-items: center;
 	grid-template-areas:
 		'header'
 		'hero'
 		'main'
 		'attribution';
-	font-family: var(--font-family);
-	background: var(--white);
-}
-
-.hidden {
-	display: none;
+	justify-items: center;
 }
 
 /* ---- HEADER STYLES ---- */
 .header {
 	grid-area: header;
-	justify-self: left;
-	padding: 32px 45px;
+	padding: 3.2rem 0;
+	width: 80%;
 }
 
 .logo {
@@ -99,26 +105,32 @@ body {
 .hero {
 	grid-area: hero;
 	width: 100%;
-	aspect-ratio: 375 / 250; /* keeps the same aspect ratio as the background image */
+	overflow: hidden;
+}
 
-	background: var(--hero-img) center center / cover no-repeat
-		var(--desaturated-red);
+.hero__picture img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
 }
 
 /* ---- MAIN SECTION STYLES ---- */
-
 .main {
 	grid-area: main;
 	display: grid;
 	justify-items: center;
 	justify-content: center;
+
+	width: 80%;
+	max-width: 45rem;
 }
 
 .heading {
 	max-width: 10ch;
 	margin: 6rem 0 1.5rem;
 
-	color: var(--desaturated-red);
+	color: var(--primary-color);
 	font-size: 4rem;
 	font-weight: var(--fw-light);
 	text-transform: uppercase;
@@ -128,15 +140,15 @@ body {
 
 .heading__important {
 	display: block;
-	color: var(--dark-grayish-red);
+	color: var(--gray-color);
 	font-weight: var(--fw-semi-bold);
 }
 
 .info-text {
-	width: var(--content-width);
+	width: 100%;
 	margin-bottom: 3rem;
 
-	color: var(--desaturated-red);
+	color: var(--primary-color);
 	font-size: 1.4rem;
 	font-weight: var(--fw-regular);
 	line-height: 1.5;
@@ -144,84 +156,118 @@ body {
 }
 
 /* ---- FORM STYLES ---- */
-
 .form {
-	width: var(--content-width);
+	width: 100%;
 	position: relative;
 	margin-bottom: 5rem;
 }
 
-.input-email,
-.btn-submit {
+.input,
+.btn {
 	height: 4.6rem;
 }
 
-.input-email {
-	padding: 0 2rem;
-	border: 1px solid var(--desaturated-red);
+.input {
+	padding: 1rem 3rem;
+	border: 1px solid var(--primary-color);
 	width: 100%;
 
-	color: var(--desaturated-red);
+	color: var(--gray-color);
 	font-weight: var(--fw-regular);
-	font-family: var(--font-family);
+	font-family: inherit;
 
 	border-radius: 50px;
 }
 
-.btn-submit {
+.input:focus {
+	outline: 5px solid var(--focus-shadow-color);
+}
+
+.input::placeholder {
+	color: var(--primary-color);
+}
+
+.input--error {
+	border: 2px solid var(--error-color);
+}
+
+.error {
+	display: block;
+	position: relative;
+	padding: 0.6rem 3rem;
+	color: var(--error-color);
+	font-size: 1.2rem;
+}
+
+.error::before {
+	content: url('../images/icon-error.svg');
+	position: absolute;
+	right: 7.4rem;
+	top: -3.5rem;
+}
+
+.btn {
 	position: absolute;
 	right: 0;
+	top: 0;
+
 	padding: 0 2.5rem;
 	border: none;
-	background: var(--gradient-button);
+	background: var(--button-gradient);
+
 	border-radius: 100px;
-	box-shadow: 0 10px 25px var(--desaturated-red);
+	box-shadow: 0 10px 25px var(--primary-color);
 	cursor: pointer;
-}
-
-/* TODO active background for button */
-.btn-submit:hover {
-	/* background: var(--other-gradient), var(gra); */
-}
-
-/* TODO default outline on focus looks bad */
-.input-email:focus,
-.btn-submit:focus {
-	/* outline: 1px solid var(--desaturated-red);asd */
 	outline: none;
+}
+
+.btn:focus,
+.btn:hover {
+	background: var(--button-hover-color);
 }
 
 /* ----ATTRIBUTION -STYLES ---- */
 .attribution {
 	grid-area: attribution;
-	font-size: 1.1rem;
-	color: var(--desaturated-red);
+	font-size: 11px;
+	color: var(--primary-color);
 	padding: 1rem;
 	text-align: center;
 }
 
 .attribution__link:link,
 .attribution__link:visited {
-	color: var(--dark-grayish-red);
+	color: var(--gray-color);
 	text-decoration: none;
 	border-bottom: 1px solid;
 }
 
-@media screen and (min-width: 600px) {
-	:root {
-		--hero-img: url('../images/hero-desktop.jpg');
-	}
+/* ---- MEDIA QUERIES ---- */
 
+/* 640px */
+@media screen and (min-width: 40em) {
+	/* TODO why the vertical scroll on desktop? */
 	body {
-		height: 100vh;
-		grid-template-columns: 1fr 0.8fr;
+		grid-template-columns: 1fr 0.9fr;
 		grid-template-rows: auto 1fr auto;
 		grid-template-areas:
 			'header hero'
 			'main hero'
 			'attribution hero';
-		justify-items: center;
-		justify-content: stretch;
+
+		height: 100vh;
+		background: url('../images/bg-pattern-desktop.svg') left / 55% no-repeat,
+			var(--body-background-gradient);
+	}
+
+	.header {
+		padding-bottom: 0;
+		width: 80%;
+	}
+
+	.main {
+		justify-items: left;
+		align-content: center;
 	}
 
 	.heading,
@@ -229,30 +275,16 @@ body {
 		text-align: left;
 	}
 
-	.header {
-		padding-bottom: 0;
-		margin-bottom: 0;
-	}
-
-	.main {
-		justify-items: left;
-		justify-content: center;
-	}
-
-	.hero {
-		width: 100%;
-		height: 100%;
-		aspect-ratio: none;
+	.form {
+		margin: 0;
 	}
 }
 
-@media screen and (min-width: 900px) {
-	:root {
-		--content-width: 45rem;
-	}
-	.input-email,
-	.btn-submit {
-		height: 5.6rem;
+/* 768px */
+@media screen and (min-width: 48em) {
+	.input,
+	.btn {
+		height: 5rem;
 	}
 
 	.logo {
@@ -268,11 +300,20 @@ body {
 		font-size: 1.6rem;
 	}
 
-	.input-email {
+	.input {
 		font-size: 1.6rem;
 	}
 
-	.btn-submit {
+	.btn {
 		width: 10rem;
+	}
+
+	.error {
+		font-size: 1.4rem;
+		padding-top: 1rem;
+	}
+	.error::before {
+		right: 11.5rem;
+		top: -4rem;
 	}
 }

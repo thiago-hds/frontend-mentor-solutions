@@ -21,13 +21,27 @@
 
 		<link rel="stylesheet" href="styles/style.css" />
 
+		<script defer src="scripts/script.js"></script>
+
 		<title>Frontend Mentor | Base Apparel coming soon page</title>
 	</head>
 	<body>
 		<header class="header">
 			<img class="logo" src="./images/logo.svg" alt="Base Apparel" />
 		</header>
-		<div class="hero"></div>
+		<div class="hero">
+			<picture class="hero__picture">
+				<source
+					media="(max-width: 639px)"
+					srcset="images/hero-mobile.jpg"
+				/>
+				<source
+					media="(min-width: 640px)"
+					srcset="images/hero-desktop.jpg"
+				/>
+				<img src="images/hero-desktop.jpg" alt="" />
+			</picture>
+		</div>
 		<main class="main">
 			<h1 class="heading">
 				We're <b class="heading__important">coming soon</b>
@@ -39,18 +53,22 @@
 				announcements and our launch deals.
 			</p>
 
-			<form class="form" action="">
-				<label class="hidden" for="email">Email address</label>
+			<form class="form" id="form" action="">
 				<input
-					class="input-email"
+					class="input"
 					type="email"
 					name="email"
 					id="email"
 					placeholder="Email Address"
+					aria-label="Email Address"
+					required
 				/>
-				<button class="btn-submit" type="submit">
+				<span
+					class="email__error error hidden"
+					aria-live="polite"
+				></span>
+				<button class="btn" type="submit" aria-label="Submit">
 					<img src="./images/icon-arrow.svg" alt="" />
-					<span class="hidden">Submit</span>
 				</button>
 			</form>
 		</main>

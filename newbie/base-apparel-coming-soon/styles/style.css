@@ -1,31 +1,3 @@
-/* 
-## Colors
-
-### Primary
-
-- Desaturated Red: hsl(0, 36%, 70%)
-- Soft Red: hsl(0, 93%, 68%)
-
-### Neutral
-
-- Dark Grayish Red: hsl(0, 6%, 24%)
-
-### Gradients
-
-- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 16px
-
-### Font
-
-- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
-- Weights: 300, 400, 600 */
-
 :root {
 	/* colors */
 	--primary-color: hsl(0, 36%, 70%);
@@ -192,9 +164,10 @@ body {
 }
 
 .error {
-	display: block;
 	position: relative;
-	padding: 0.6rem 3rem;
+	display: block;
+	height: 2rem;
+	padding: 1rem 3rem;
 	color: var(--error-color);
 	font-size: 1.2rem;
 }
@@ -244,9 +217,8 @@ body {
 
 /* ---- MEDIA QUERIES ---- */
 
-/* 640px */
+/* Above 640px */
 @media screen and (min-width: 40em) {
-	/* TODO why the vertical scroll on desktop? */
 	body {
 		grid-template-columns: 1fr 0.9fr;
 		grid-template-rows: auto 1fr auto;
@@ -255,7 +227,7 @@ body {
 			'main hero'
 			'attribution hero';
 
-		height: 100vh;
+		min-height: 100vh;
 		background: url('../images/bg-pattern-desktop.svg') left / 55% no-repeat,
 			var(--body-background-gradient);
 	}
@@ -280,7 +252,7 @@ body {
 	}
 }
 
-/* 768px */
+/* Above 768px */
 @media screen and (min-width: 48em) {
 	.input,
 	.btn {
@@ -310,8 +282,8 @@ body {
 
 	.error {
 		font-size: 1.4rem;
-		padding-top: 1rem;
 	}
+
 	.error::before {
 		right: 11.5rem;
 		top: -4rem;

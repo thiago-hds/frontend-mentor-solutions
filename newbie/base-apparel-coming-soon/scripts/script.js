@@ -3,6 +3,7 @@ const emailInput = document.querySelector('#email');
 const emailErrorSpan = document.querySelector('.email__error');
 
 const invalidEmailMessage = 'Please provide a valid email';
+let triedToSubmit = false;
 
 const hideEmailError = function () {
 	emailErrorSpan.textContent = '';
@@ -16,19 +17,23 @@ const showEmailError = function () {
 	emailInput.classList.add('input--error');
 };
 
-emailInput.addEventListener('input', function () {
+const validateEmail = function () {
 	if (emailInput.validity.valid) {
 		hideEmailError();
-	} else {
-		showEmailError();
+		return true;
 	}
-});
+	
+	showEmailError();
+	return false;
+};
 
 form.addEventListener('submit', function (e) {
-	if (!emailInput.validity.valid) {
-		showEmailError();
-		e.preventDefault();
-	}
+	if (validateEmail()) return;
+	e.preventDefault();
+
+	if (triedToSubmit) return;
+	triedToSubmit = true;
+	emailInput.addEventListener('input', validateEmail);
 });
 
 form.setAttribute('novalidate', true);

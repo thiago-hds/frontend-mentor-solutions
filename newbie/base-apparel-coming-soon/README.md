@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-html-css-css-grid-js-ndbJS4vZa](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-html-css-css-grid-js-ndbJS4vZa)
+-   Live Site URL: [https://thiago-hds.github.io/frontend-mentor-solutions/newbie/base-apparel-coming-soon/](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/base-apparel-coming-soon/)
 
 ## My process
 

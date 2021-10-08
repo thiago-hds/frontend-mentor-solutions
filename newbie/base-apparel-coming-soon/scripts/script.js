@@ -22,7 +22,7 @@ const validateEmail = function () {
 		hideEmailError();
 		return true;
 	}
-	
+
 	showEmailError();
 	return false;
 };
@@ -36,4 +36,4 @@ form.addEventListener('submit', function (e) {
 	emailInput.addEventListener('input', validateEmail);
 });
 
-form.setAttribute('novalidate', true);
+form.noValidate = true;

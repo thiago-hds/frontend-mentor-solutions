@@ -43,17 +43,21 @@
 								type="text"
 								name="first-name"
 								id="first-name"
+								class="input input--invalid"
 								placeholder="First Name"
 								aria-label="First Name"
 								required
 							/>
-							<span class="error"></span>
+							<span class="error"
+								>First name cannot be empty</span
+							>
 						</li>
 						<li>
 							<input
 								type="text"
 								name="last-name"
 								id="last-name"
+								class="input"
 								placeholder="Last Name"
 								aria-label="Last Name"
 								required
@@ -65,6 +69,7 @@
 								type="email"
 								name="email"
 								id="email"
+								class="input"
 								placeholder="Email Address"
 								aria-label="Email Address"
 								required
@@ -76,6 +81,7 @@
 								type="password"
 								name="password"
 								id="password"
+								class="input"
 								placeholder="Password"
 								aria-label="Password"
 								required
@@ -83,7 +89,7 @@
 							<span class="error"></span>
 						</li>
 						<li>
-							<button>Claim your free trial</button>
+							<button class="btn">Claim your free trial</button>
 						</li>
 					</ul>
 					<p class="terms-and-services-info">

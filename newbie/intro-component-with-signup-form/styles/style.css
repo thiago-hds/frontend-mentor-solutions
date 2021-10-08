@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--red: hsl(0, 100%, 74%);
+	--green: hsl(154, 59%, 51%);
+	--blue: hsl(248, 32%, 49%);
+	--dark-blue: hsl(249, 10%, 26%);
+	--grayish-blue: hsl(246, 25%, 77%);
+
+	--white: hsl(0, 0%, 100%);
+
+	--font-family: 'Poppins', sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: grid;
+	grid-template-rows: 1fr auto;
+
+	background: url('../images/bg-intro-mobile.png') var(--red);
+	font-family: var(--font-family);
+}
+
+main {
+	display: grid;
+	gap: 6rem;
+
+	padding: 8rem 3.5rem;
+}
+
+strong {
+	font-weight: 700;
+}
+
+.text-box {
+	color: var(--white);
+	text-align: center;
+}
+
+.heading {
+	margin-bottom: 2rem;
+	font-size: 2.8rem;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.description {
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.free-trial-info {
+	padding: 2rem 6rem;
+	margin-bottom: 2rem;
+	background: var(--blue);
+	color: white;
+	font-size: 1.6rem;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0 8px 0 hsl(249, 10%, 26%, 0.2);
+}
+
+.free-trial-form {
+	padding: 2rem;
+	background: var(--white);
+	border-radius: 10px;
+}
+
+.free-trial-form li {
+	list-style: none;
+	margin-bottom: 1rem;
+}
+
+.free-trial-form input {
+	width: 100%;
+	padding: 2rem;
+	border: 1px solid var(--grayish-blue);
+
+	color: var(--dark-blue);
+	font-family: inherit;
+	font-size: 1.2rem;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+.free-trial-form input::placeholder {
+	font-size: 1.2rem;
+}
+
+.free-trial-form button {
+	width: 100%;
+	padding: 2rem;
+	border: none;
+	background: var(--green);
+	color: var(--white);
+	font-weight: 600;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	box-shadow: inset 0 -3px 0 1px hsl(249, 10%, 26%, 0.2);
+}
+
+.terms-and-services-info {
+	color: var(--grayish-blue);
+	text-align: center;
+	font-size: 1rem;
+	padding: 0 2rem;
+}
+
+.terms-and-services-info a:link,
+.terms-and-services-info a:visited {
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--red);
+}
+
+.attribution {
+	color: var(--white);
+	text-align: center;
+	padding: 1rem;
+}
+
+.attribution a:link,
+a:visited {
+	font-size: 11px;
+	color: var(--blue);
+	text-decoration: none;
+	font-weight: 600;
+	border-bottom: 1px solid currentColor;
+}

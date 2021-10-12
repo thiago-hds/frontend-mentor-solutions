@@ -35,11 +35,16 @@ main {
 	justify-items: center;
 	gap: 7rem;
 
-	padding: 9rem 3.5rem;
+	padding: 9rem 2rem;
 }
 
 strong {
 	font-weight: 700;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
 }
 
 .text-box {
@@ -106,14 +111,19 @@ strong {
 }
 
 .input::placeholder {
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 1.4rem;
 	color: var(--dark-blue);
+	opacity: 0.7;
 }
 
 .input.input--invalid {
 	color: var(--red);
 	border: 2px solid var(--red);
+}
+
+.input.input--invalid::placeholder {
+	color: var(--red);
 }
 
 .btn {
@@ -144,6 +154,7 @@ strong {
 	font-weight: 500;
 	font-style: italic;
 	position: relative;
+	transition: opacity 0.3s;
 }
 
 .error::before {

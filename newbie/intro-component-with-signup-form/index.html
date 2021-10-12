@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- displays site properly based on user's device -->
+		<meta name="theme-color" content="hsl(0, 100%, 74%)" />
 
 		<link
 			rel="icon"
@@ -19,6 +20,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="styles/style.css" />
+		<script defer src="scripts/script.js"></script>
 
 		<title>Frontend Mentor | Intro component with sign up form</title>
 	</head>
@@ -43,14 +45,13 @@
 								type="text"
 								name="first-name"
 								id="first-name"
-								class="input input--invalid"
+								class="input"
 								placeholder="First Name"
 								aria-label="First Name"
+								maxlength="100"
 								required
 							/>
-							<span class="error"
-								>First name cannot be empty</span
-							>
+							<span class="error hidden"></span>
 						</li>
 						<li>
 							<input
@@ -60,21 +61,23 @@
 								class="input"
 								placeholder="Last Name"
 								aria-label="Last Name"
+								maxlength="100"
 								required
 							/>
-							<span class="error"></span>
+							<span class="error hidden"></span>
 						</li>
 						<li>
 							<input
-								type="email"
+								type="text"
 								name="email"
 								id="email"
 								class="input"
 								placeholder="Email Address"
 								aria-label="Email Address"
+								pattern="^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$"
 								required
 							/>
-							<span class="error"></span>
+							<span class="error hidden"></span>
 						</li>
 						<li>
 							<input
@@ -84,12 +87,16 @@
 								class="input"
 								placeholder="Password"
 								aria-label="Password"
+								maxlength="100"
+								minlength="6"
 								required
 							/>
-							<span class="error"></span>
+							<span class="error hidden"></span>
 						</li>
 						<li>
-							<button class="btn">Claim your free trial</button>
+							<button type="submit" class="btn">
+								Claim your free trial
+							</button>
 						</li>
 					</ul>
 					<p class="terms-and-services-info">

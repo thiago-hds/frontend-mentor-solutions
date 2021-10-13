@@ -9,30 +9,39 @@ const getFormattedInputName = function (name) {
 };
 
 const getErrorMessage = function (input) {
-	const inputName = getFormattedInputName(input.getAttribute('name'));
+	const inputName = input.getAttribute('name');
+	const inputNameFormatted = getFormattedInputName(inputName);
 
-	if (input.validity.valueMissing) return `${inputName} cannot be empty`;
-	if (input.validity.tooLong) return `${inputName} is too long`;
-	if (inputName === 'Password' && input.validity.tooShort)
-		return `${inputName} should have at least 6 characters`;
-	if (inputName === 'Email' && input.validity.patternMismatch)
+	if (input.validity.valueMissing) {
+		return `${inputNameFormatted} cannot be empty`;
+	}
+	if (input.validity.tooLong) {
+		return `${inputNameFormatted} is too long`;
+	}
+	if (input.validity.tooShort) {
+		return `${inputNameFormatted} should have at least ${input.getAttribute(
+			'minlength'
+		)} characters`;
+	}
+	if (inputName === 'email' && input.validity.patternMismatch) {
 		return 'Looks like this is not an email';
+	}
 
-	return `${inputName} is invalid`;
+	return `${inputNameFormatted} is invalid`;
 };
 
 const validateInput = function (input) {
-	const errorEl = input.parentElement.querySelector('.error');
+	const errorContainer = input.parentElement.querySelector('.error');
 
 	if (!input.validity.valid) {
-		errorEl.textContent = getErrorMessage(input);
-		errorEl.classList.remove('hidden');
+		errorContainer.textContent = getErrorMessage(input);
+		errorContainer.classList.remove('hidden');
 		input.classList.add('input--invalid');
 		return false;
 	}
 
-	errorEl.textContent = '';
-	errorEl.classList.add('hidden');
+	errorContainer.textContent = '';
+	errorContainer.classList.add('hidden');
 	input.classList.remove('input--invalid');
 	return true;
 };

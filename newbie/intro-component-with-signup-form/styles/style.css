@@ -25,7 +25,6 @@ html {
 body {
 	display: grid;
 	grid-template-rows: 1fr auto;
-
 	background: url('../images/bg-intro-mobile.png') var(--red);
 	font-family: var(--font-family);
 }
@@ -34,7 +33,6 @@ main {
 	display: grid;
 	justify-items: center;
 	gap: 7rem;
-
 	padding: 9rem 2rem;
 }
 
@@ -48,9 +46,9 @@ strong {
 }
 
 .text-box {
+	max-width: 52rem;
 	color: var(--white);
 	text-align: center;
-	max-width: 52rem;
 }
 
 .heading {
@@ -66,14 +64,14 @@ strong {
 }
 
 .form-box {
-	max-width: 55.5rem;
+	max-width: 54rem;
 }
 
 .free-trial-info {
 	padding: 2rem 6rem;
 	margin-bottom: 2rem;
 	background: var(--blue);
-	color: white;
+	color: var(--white);
 	font-size: 1.6rem;
 	text-align: center;
 	border-radius: 10px;
@@ -96,13 +94,12 @@ strong {
 	width: 100%;
 	padding: 1.8rem;
 	border: 1px solid var(--grayish-blue);
-
+	margin-bottom: 0.6rem;
 	color: var(--dark-blue);
 	font-family: inherit;
 	font-size: 1.2rem;
 	font-weight: 600;
 	border-radius: 5px;
-	margin-bottom: 0.6rem;
 }
 
 .input:focus {
@@ -126,25 +123,6 @@ strong {
 	color: var(--red);
 }
 
-.btn {
-	width: 100%;
-	padding: 2rem;
-	border: none;
-	background: var(--green);
-	color: var(--white);
-	font-weight: 600;
-	font-size: 1.4rem;
-	text-transform: uppercase;
-	border-radius: 5px;
-	letter-spacing: 1px;
-	box-shadow: inset 0 -3px 0 1px var(--shadow-color);
-	cursor: pointer;
-}
-
-.btn:hover {
-	background: var(--button-hover-color);
-}
-
 .error {
 	font-size: 1.1rem;
 	color: var(--red);
@@ -164,38 +142,65 @@ strong {
 	top: -4.6rem;
 }
 
+.btn {
+	width: 100%;
+	padding: 2rem;
+	border: none;
+	background: var(--green);
+	color: var(--white);
+	font-weight: 600;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 5px;
+	box-shadow: inset 0 -3px 0 1px var(--shadow-color);
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: var(--button-hover-color);
+}
+
 .terms-and-services-info {
+	padding: 0 2rem;
 	color: var(--grayish-blue);
 	font-weight: 500;
 	text-align: center;
 	font-size: 1rem;
-	padding: 0 2rem;
 	line-height: 2;
 }
 
 .terms-and-services-info a:link,
 .terms-and-services-info a:visited {
+	color: var(--red);
 	font-weight: 700;
 	text-decoration: none;
-	color: var(--red);
 }
 
 .attribution {
+	padding: 2rem;
 	color: var(--white);
 	text-align: center;
-	padding: 2rem;
 }
 
 .attribution a:link,
 .attribution a:visited {
-	font-size: 11px;
 	color: var(--blue);
-	text-decoration: none;
+	font-size: 11px;
 	font-weight: 600;
+	text-decoration: none;
 	border-bottom: 1px solid currentColor;
 }
 
-/* --- ABOVE 960px ---- */
+/* ---- ABOVE 512px ---- */
+@media (min-width: 32em) {
+	.heading {
+		font-size: 4.8rem;
+		line-height: 1.2;
+	}
+}
+
+/* ---- ABOVE 960px ---- */
 @media (min-width: 60em) {
 	body {
 		min-height: 100vh;
@@ -204,6 +209,7 @@ strong {
 	main {
 		grid-template-columns: 1fr 1fr;
 		align-items: center;
+		gap: 5rem;
 		padding: 8rem 4rem;
 	}
 
@@ -211,17 +217,16 @@ strong {
 		justify-self: right;
 	}
 
-	.form-box {
-		justify-self: left;
-	}
-
 	.heading,
 	.description {
 		text-align: left;
 	}
 
-	.heading {
-		font-size: 4.8rem;
-		line-height: 1.2;
+	.form-box {
+		justify-self: stretch;
+	}
+
+	.free-trial-form {
+		padding: 4rem;
 	}
 }

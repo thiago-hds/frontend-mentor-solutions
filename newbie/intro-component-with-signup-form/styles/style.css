@@ -86,8 +86,9 @@ strong {
 }
 
 .free-trial-form li {
-	list-style: none;
+	position: relative;
 	margin-bottom: 1.5rem;
+	list-style: none;
 }
 
 .input {
@@ -107,20 +108,32 @@ strong {
 	border: 1px solid var(--dark-blue);
 }
 
-.input::placeholder {
+.input.input--invalid {
+	color: var(--red);
+	border: 2px solid var(--red);
+}
+
+.input.input--invalid + .label {
+	color: var(--red);
+}
+
+.input--valid {
+	border: 2px solid var(--green);
+}
+
+.label {
+	position: absolute;
+	top: 18px;
+	left: 16px;
 	font-weight: 600;
 	font-size: 1.4rem;
 	color: var(--dark-blue);
 	opacity: 0.7;
 }
 
-.input.input--invalid {
-	color: var(--red);
-	border: 2px solid var(--red);
-}
-
-.input.input--invalid::placeholder {
-	color: var(--red);
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+	opacity: 0;
 }
 
 .error {
@@ -204,6 +217,7 @@ strong {
 @media (min-width: 60em) {
 	body {
 		min-height: 100vh;
+		background: url('../images/bg-intro-desktop.png') var(--red);
 	}
 
 	main {

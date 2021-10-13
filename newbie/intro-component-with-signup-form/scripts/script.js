@@ -37,14 +37,23 @@ const validateInput = function (input) {
 		errorContainer.textContent = getErrorMessage(input);
 		errorContainer.classList.remove('hidden');
 		input.classList.add('input--invalid');
+		input.classList.remove('input--valid');
 		return false;
 	}
 
 	errorContainer.textContent = '';
 	errorContainer.classList.add('hidden');
 	input.classList.remove('input--invalid');
+	input.classList.add('input--valid');
 	return true;
 };
+
+freeTrialForm.addEventListener('input', function (e) {
+	const input = e.target.closest('.input');
+	if (!input) return;
+
+	validateInput(input);
+});
 
 freeTrialForm.addEventListener('submit', function (e) {
 	let formInvalid = false;

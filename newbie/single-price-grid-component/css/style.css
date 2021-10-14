@@ -173,8 +173,8 @@ main {
 	color: var(--bright-yellow);
 }
 
-/* ---- ABOVE px ---- */
-@media (min-width: 900px) {
+/* ---- ABOVE 800px ---- */
+@media (min-width: 50em) {
 	html {
 		font-size: 75%;
 	}

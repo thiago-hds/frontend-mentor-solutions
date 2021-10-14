@@ -1,50 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Single Price Grid Component</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Join our community
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 
-  30-day, hassle-free money back guarantee
+		<link rel="stylesheet" href="css/style.css" />
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
+		<title>Frontend Mentor | Single Price Grid Component</title>
+	</head>
+	<body>
+		<main>
+			<article class="price-card">
+				<h1 class="hidden">Pricing</h1>
+				<section class="section section--join">
+					<h2 class="heading-primary mb-md">Join our community</h2>
+					<p class="subheading mb-sm">
+						30-day, hassle-free money back guarantee
+					</p>
+					<p class="text text--dark">
+						Gain access to our full library of tutorials along with
+						expert code reviews. Perfect for any developers who are
+						serious about honing their skills.
+					</p>
+				</section>
+				<section class="section section--subscription">
+					<h2 class="heading-secondary mb-md">
+						Monthly Subscription
+					</h2>
+					<p class="pricing mb-sm">
+						<span class="pricing__price">&dollar;29</span>
+						<span class="pricing__details">per month</span>
+					</p>
+					<p class="text text--light mb-lg">
+						Full access for less than &dollar;1 a day
+					</p>
+					<a class="button" href="#">Sign Up</a>
+				</section>
+				<section class="section section--why-us">
+					<h2 class="heading-secondary mb-md">Why Us</h2>
+					<ul class="list">
+						<li>Tutorials by industry experts</li>
+						<li>Peer &amp; expert code review</li>
+						<li>Coding exercises</li>
+						<li>Access to our GitHub repos</li>
+						<li>Community forum</li>
+						<li>Flashcard decks</li>
+						<li>New videos every week</li>
+					</ul>
+				</section>
+			</article>
+		</main>
 
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+		<footer>
+			<p class="attribution">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					>Frontend Mentor</a
+				>. Coded by
+				<a href="https://github.com/thiago-hds" target="_blank"
+					>Thiago Santos</a
+				>.
+			</p>
+		</footer>
+	</body>
 </html>

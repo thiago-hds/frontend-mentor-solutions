@@ -1,10 +1,16 @@
 # Frontend Mentor Solutions
 
-Solutions for challenges from [Frontend Mentor](https://www.frontendmentor.io).
+## Description
+
+Solutions for challenges from [Frontend Mentor](https://www.frontendmentor.io). 
+
+Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 Frontend Mentor Profile: [@thiago-hds](https://www.frontendmentor.io/profile/thiago-hds)
 
-## Level 1: Newbie
+## Challenges
+
+### Level 1: Newbie
 
 <!-- prettier-ignore-start -->
 | Challenge | Solution URL | Code  | Live URL |

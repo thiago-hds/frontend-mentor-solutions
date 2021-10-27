@@ -30,30 +30,36 @@ const getErrorMessage = function (input) {
 	return `${inputNameFormatted} is invalid`;
 };
 
+const setInputErrors = function (input, errorContainer) {
+	errorContainer.textContent = getErrorMessage(input);
+	errorContainer.classList.remove('hidden');
+
+	input.classList.add('input--invalid');
+	input.classList.remove('input--valid');
+	input.setAttribute('aria-invalid', 'true');
+	input.setAttribute('aria-describedby', errorContainer.id);
+};
+
+const removeInputErrors = function (input, errorContainer) {
+	errorContainer.textContent = '';
+	errorContainer.classList.add('hidden');
+
+	input.classList.remove('input--invalid');
+	input.classList.add('input--valid');
+	input.removeAttribute('aria-invalid');
+	input.removeAttribute('aria-describedby');
+};
+
 const validateInput = function (input) {
 	const errorContainer = input.parentElement.querySelector('.error');
 
 	if (!input.validity.valid) {
-		errorContainer.textContent = getErrorMessage(input);
-		errorContainer.classList.remove('hidden');
-		input.classList.add('input--invalid');
-		input.classList.remove('input--valid');
+		setInputErrors(input, errorContainer);
 		return false;
 	}
-
-	errorContainer.textContent = '';
-	errorContainer.classList.add('hidden');
-	input.classList.remove('input--invalid');
-	input.classList.add('input--valid');
+	removeInputErrors(input, errorContainer);
 	return true;
 };
-
-freeTrialForm.addEventListener('input', function (e) {
-	const input = e.target.closest('.input');
-	if (!input) return;
-
-	validateInput(input);
-});
 
 freeTrialForm.addEventListener('submit', function (e) {
 	let formInvalid = false;

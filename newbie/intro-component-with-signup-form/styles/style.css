@@ -85,10 +85,9 @@ strong {
 	box-shadow: 0 8px 0 var(--shadow-color);
 }
 
-.free-trial-form li {
+.input-container {
 	position: relative;
 	margin-bottom: 1.5rem;
-	list-style: none;
 }
 
 .input {

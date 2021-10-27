@@ -39,72 +39,84 @@
 					<strong>Try it free 7 days</strong> then $20/mo. thereafter
 				</p>
 				<form class="free-trial-form" action="#">
-					<ul>
-						<li>
-							<input
-								type="text"
-								name="first-name"
-								id="first-name"
-								class="input"
-								maxlength="100"
-								placeholder=" "
-								required
-							/>
-							<label class="label" for="first-name"
-								>First Name</label
-							>
-							<span class="error hidden"></span>
-						</li>
-						<li>
-							<input
-								type="text"
-								name="last-name"
-								id="last-name"
-								class="input"
-								placeholder=" "
-								maxlength="100"
-								required
-							/>
-							<label for="last-name" class="label"
-								>Last Name</label
-							>
-							<span class="error hidden"></span>
-						</li>
-						<li>
-							<input
-								type="text"
-								name="email"
-								id="email"
-								class="input"
-								placeholder=" "
-								pattern="^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$"
-								required
-							/>
-							<label for="email" class="label"
-								>Email Address</label
-							>
-							<span class="error hidden"></span>
-						</li>
-						<li>
-							<input
-								type="password"
-								name="password"
-								id="password"
-								class="input"
-								placeholder=" "
-								maxlength="100"
-								minlength="6"
-								required
-							/>
-							<label for="password" class="label">Password</label>
-							<span class="error hidden"></span>
-						</li>
-						<li>
-							<button type="submit" class="btn">
-								Claim your free trial
-							</button>
-						</li>
-					</ul>
+					<div class="input-container">
+						<input
+							type="text"
+							name="first-name"
+							id="first-name"
+							class="input"
+							maxlength="100"
+							placeholder=" "
+							required
+						/>
+						<label class="label" for="first-name">First Name</label>
+						<span
+							id="error-first-name"
+							class="error hidden"
+							aria-live="assertive"
+							aria-atomic="true"
+						></span>
+					</div>
+					<div class="input-container">
+						<input
+							type="text"
+							name="last-name"
+							id="last-name"
+							class="input"
+							placeholder=" "
+							maxlength="100"
+							required
+						/>
+						<label for="last-name" class="label">Last Name</label>
+						<span
+							id="error-last-name"
+							class="error hidden"
+							aria-live="assertive"
+							aria-atomic="true"
+						></span>
+					</div>
+					<div class="input-container">
+						<input
+							type="text"
+							name="email"
+							id="email"
+							class="input"
+							placeholder=" "
+							pattern="^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+(\.[a-zA-Z]+)?$"
+							required
+						/>
+						<label for="email" class="label">Email Address</label>
+						<span
+							id="error-email"
+							class="error hidden"
+							aria-live="assertive"
+							aria-atomic="true"
+						></span>
+					</div>
+					<div class="input-container">
+						<input
+							type="password"
+							name="password"
+							id="password"
+							class="input"
+							placeholder=" "
+							maxlength="100"
+							minlength="6"
+							required
+						/>
+						<label for="password" class="label">Password</label>
+						<span
+							id="error-password"
+							class="error hidden"
+							aria-live="assertive"
+							aria-atomic="true"
+						></span>
+					</div>
+
+					<button type="submit" class="btn">
+						Claim your free trial
+					</button>
+
 					<p class="terms-and-services-info">
 						By clicking the button, you are agreeing to our
 						<a href="#"> Terms and Services </a>

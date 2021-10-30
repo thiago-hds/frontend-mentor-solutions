@@ -31,7 +31,6 @@ body {
 }
 
 /* ---- REUSABLE CLASSES ---- */
-
 .container {
 	display: grid;
 	justify-items: center;
@@ -47,8 +46,8 @@ body {
 
 /* ---- HEADER ---- */
 .logo {
-	margin-bottom: 4rem;
 	width: 10rem;
+	margin-bottom: 4rem;
 }
 
 .primary-heading {
@@ -81,32 +80,20 @@ body {
 	margin-bottom: 6rem;
 }
 
-.input-group {
-	position: relative;
-}
-
 .input {
 	width: 100%;
+	height: 5.5rem;
 	padding: 0 3rem;
 	border: 2px solid var(--pale-blue);
 	border-radius: 100px;
 	font-size: 2rem;
 	font-weight: 300;
-	height: 5.5rem;
 	font-family: inherit;
 }
 
 .input::placeholder {
 	color: var(--pale-blue);
-	/* position: absolute; */
-	/* top: 2.6rem; */
-	/* left: 6rem; */
 	font-size: 2rem;
-}
-
-.input:focus + .input-label,
-.input:not(:placeholder-shown) + .input-label {
-	opacity: 0;
 }
 
 .input.input--error {
@@ -115,25 +102,25 @@ body {
 
 .error-container {
 	display: block;
-	font-size: 1.4rem;
-	font-style: italic;
-	color: var(--light-red);
 	padding: 1rem 3rem;
-	text-align: center;
+	color: var(--light-red);
+	font-size: 1.4rem;
 	font-weight: 300;
+	font-style: italic;
+	text-align: center;
 }
 
 .button {
 	width: 100%;
-	border: none;
+	height: 5.5rem;
 	padding: 0 2rem;
+	border: none;
 	background: var(--blue);
-	border-radius: 100px;
 	color: var(--white);
 	font-weight: 600;
 	font-size: 1.6rem;
 	cursor: pointer;
-	height: 5.5rem;
+	border-radius: 100px;
 }
 
 .button:hover {
@@ -142,8 +129,8 @@ body {
 
 /* ---- IMAGE AND SOCIAL LINKS ---- */
 .image {
-	margin-bottom: 6rem;
 	max-width: 100%;
+	margin-bottom: 6rem;
 }
 
 .social-container {
@@ -153,15 +140,14 @@ body {
 }
 
 .social {
-	width: 5.5rem;
-	height: 5.5rem;
-
-	border: 1px solid var(--pale-blue);
-	padding: 1.2rem;
-	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 5.5rem;
+	height: 5.5rem;
+	padding: 1.2rem;
+	border: 1px solid var(--pale-blue);
+	border-radius: 50%;
 }
 
 .social:hover {

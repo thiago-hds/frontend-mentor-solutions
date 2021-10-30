@@ -2,9 +2,9 @@
 
 ## Description
 
-Solutions for challenges from [Frontend Mentor](https://www.frontendmentor.io). 
+Solutions for challenges from [Frontend Mentor](https://www.frontendmentor.io).
 
-Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 Frontend Mentor Profile: [@thiago-hds](https://www.frontendmentor.io/profile/thiago-hds)
 
@@ -26,6 +26,6 @@ Frontend Mentor Profile: [@thiago-hds](https://www.frontendmentor.io/profile/thi
 | **[Base Apparel coming soon page](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0)** | [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-html-css-css-grid-js-ndbJS4vZa) | [Repository](./newbie/base-apparel-coming-soon) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/base-apparel-coming-soon/) |
 | **[Intro component with sign up form](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1)** | [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-css-grid-js-Bqz0oU4jI) | [Repository](./newbie/intro-component-with-signup-form) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/intro-component-with-signup-form/) |
 | **[Single price grid component](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc/hub/single-price-grid-component-css-grid-flexbox-2t-ERMWgG)** | [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/single-price-grid-component-css-grid-flexbox-2t-ERMWgG) | [Repository](./newbie/single-price-grid-component) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/single-price-grid-component/) |
-| **[Ping single column coming soon page](https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da/hub/ping-single-column-coming-soon-page-sFhq_neWf)** | In Progress | [Repository](./newbie/ping-coming-soon-page) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/ping-coming-soon-page) |
+| **[Ping single column coming soon page](https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da/hub/ping-single-column-coming-soon-page-sFhq_neWf)** | [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/ping-single-column-coming-soon-page-html-css-js-84ULxl5TP) | [Repository](./newbie/ping-coming-soon-page) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/ping-coming-soon-page) |
 <!-- |  |  |  |  | -->
 <!-- prettier-ignore-end -->

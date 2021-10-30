@@ -5,8 +5,8 @@ const errorContainer = document.querySelector('.error-container');
 const emailRegex =
 	/^[a-zA-Z0-9\.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-const setValidationErrors = function () {
-	errorContainer.textContent = 'Please provide a valid email address';
+const setValidationErrors = function (emailErrorMessage) {
+	errorContainer.textContent = emailErrorMessage;
 	errorContainer.classList.remove('hidden');
 
 	emailInput.classList.add('input--error');
@@ -14,13 +14,26 @@ const setValidationErrors = function () {
 	emailInput.setAttribute('aria-describedBy', errorContainer.id);
 };
 
-const handleSubmit = function (e) {
+const validateEmail = function () {
 	const email = emailInput.value;
-	if (!emailRegex.test(email)) {
-		e.preventDefault();
-		setValidationErrors();
-		return;
+
+	if (!email) {
+		setValidationErrors(
+			'Whoops! It looks like you forgot to add your email'
+		);
+		return false;
 	}
+
+	if (!emailRegex.test(email)) {
+		setValidationErrors('Please provide a valid email address');
+		return false;
+	}
+
+	return true;
+};
+
+const handleSubmit = function (e) {
+	if (!validateEmail()) e.preventDefault();
 };
 
 form.addEventListener('submit', handleSubmit);

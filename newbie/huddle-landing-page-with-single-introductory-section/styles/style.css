@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-	width: 80%;
+	width: 90%;
 	max-width: 40rem;
 	margin: 0 auto;
 }
@@ -47,16 +47,14 @@ body {
 	padding-top: 2rem;
 }
 
-/* .row {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 6rem;
-} */
-
-/* .col {
-	display: block;
-} */
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
 
 /* ---- HEADER STYLES ---- */
 .header {
@@ -136,10 +134,12 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	width: 4rem;
 	height: 4rem;
 	padding: 0.6rem;
 	border: 1px solid currentColor;
+
 	color: var(--clr-text);
 	border-radius: 50%;
 	transition: color 0.3s;
@@ -150,7 +150,8 @@ body {
 }
 
 .social__icon {
-	font-size: 1.8rem;
+	width: 1.8rem;
+	height: 1.8rem;
 }
 
 .attribution {
@@ -168,9 +169,21 @@ body {
 	border-bottom: 1px solid currentColor;
 }
 
-@media (min-width: 720px) {
+/* ---- ABOVE 720px ---- */
+@media (min-width: 45em) {
+	body {
+		min-height: 100vh;
+		background-image: url('../images/bg-desktop.svg');
+		background-position: left;
+		background-size: auto 100%;
+	}
+
 	.container {
-		max-width: 120rem;
+		max-width: 140rem;
+	}
+
+	.logo {
+		width: 20rem;
 	}
 
 	.row {
@@ -178,10 +191,6 @@ body {
 		justify-content: center;
 		align-items: center;
 		gap: 6rem;
-	}
-
-	.logo {
-		width: 20rem;
 	}
 
 	.image-container {
@@ -201,16 +210,10 @@ body {
 	.btn:link {
 		width: 16rem;
 	}
-
-	body {
-		min-height: 100vh;
-		background-image: url('../images/bg-desktop.svg');
-		background-position: left;
-		background-size: auto 100%;
-	}
 }
 
-@media (min-width: 1020px) {
+/* ---- ABOVE 1008px ---- */
+@media (min-width: 63em) {
 	.heading-primary {
 		font-size: 3.4rem;
 	}

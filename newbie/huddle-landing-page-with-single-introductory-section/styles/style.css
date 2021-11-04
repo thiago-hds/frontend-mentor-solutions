@@ -115,10 +115,11 @@ body {
 }
 
 /* ---- FOOTER STYLES ---- */
-.social-container {
+.social-list {
 	display: flex;
 	justify-content: center;
 	gap: 2rem;
+	list-style: none;
 }
 
 .social-link:link,
@@ -169,13 +170,14 @@ body {
 /* ---- ABOVE 720px ---- */
 @media (min-width: 45em) {
 	body {
+		display: grid;
+		grid-template-rows: 1fr auto 1fr;
+		align-items: center;
+
 		min-height: 100vh;
 		background-image: url('../images/bg-desktop.svg');
 		background-position: left;
 		background-size: auto 100%;
-		display: grid;
-		grid-template-rows: 1fr auto 1fr;
-		align-items: center;
 	}
 
 	.container {
@@ -184,12 +186,6 @@ body {
 
 	.header {
 		align-self: end;
-	}
-
-	.footer {
-		align-self: stretch;
-		display: grid;
-		align-content: space-between;
 	}
 
 	.logo {
@@ -214,10 +210,6 @@ body {
 		width: 45%;
 	}
 
-	.social-container {
-		justify-self: flex-end;
-	}
-
 	.heading-primary {
 		font-size: 2.8rem;
 	}
@@ -225,6 +217,16 @@ body {
 	.btn:link {
 		width: 16rem;
 		font-size: 1.8rem;
+	}
+
+	.footer {
+		align-self: stretch;
+		display: grid;
+		align-content: space-between;
+	}
+
+	.social-list {
+		justify-self: flex-end;
 	}
 
 	.attribution {
@@ -245,12 +247,4 @@ body {
 		width: 20rem;
 		font-size: 1.8rem;
 	}
-
-	/* .image-container {
-		width: 60%;
-	}
-
-	.text-container {
-		width: 40%;
-	} */
 }

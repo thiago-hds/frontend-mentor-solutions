@@ -24,11 +24,9 @@ body {
 	background: url('../images/bg-mobile.svg') top / 100% no-repeat
 		var(--clr-background);
 	color: var(--clr-text);
-	display: grid;
-	grid-template-rows: 1fr auto;
-	align-items: center;
 }
 
+/* ---- UTILITY ---- */
 .container {
 	width: 90%;
 	max-width: 40rem;
@@ -36,15 +34,11 @@ body {
 }
 
 .mb-sm {
-	margin-bottom: 2rem !important;
+	margin-bottom: 2rem;
 }
 
 .mb-md {
-	margin-bottom: 6rem !important;
-}
-
-.pt-sm {
-	padding-top: 2rem;
+	margin-bottom: 6rem;
 }
 
 .sr-only {
@@ -56,19 +50,20 @@ body {
 	overflow: hidden;
 }
 
-/* ---- HEADER STYLES ---- */
-.header {
-	padding: 2rem 0;
-}
-
 .grid {
 	display: grid;
+}
+
+/* ---- HEADER STYLES ---- */
+.header {
+	padding-top: 4rem;
 }
 
 .logo {
 	width: 14rem;
 }
 
+/* ---- MAIN STYLES ---- */
 .image-container {
 	margin-bottom: 6rem;
 }
@@ -119,6 +114,7 @@ body {
 	color: var(--clr-text);
 }
 
+/* ---- FOOTER STYLES ---- */
 .social-container {
 	display: flex;
 	justify-content: center;
@@ -177,45 +173,84 @@ body {
 		background-image: url('../images/bg-desktop.svg');
 		background-position: left;
 		background-size: auto 100%;
+		display: grid;
+		grid-template-rows: 1fr auto 1fr;
+		align-items: center;
 	}
 
 	.container {
 		max-width: 140rem;
 	}
 
-	.logo {
-		width: 20rem;
+	.header {
+		align-self: end;
 	}
 
-	.row {
+	.footer {
+		align-self: stretch;
+		display: grid;
+		align-content: space-between;
+	}
+
+	.logo {
+		width: 20.4rem;
+	}
+
+	.main {
+		align-self: start;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 6rem;
+		gap: 2rem;
 	}
 
 	.image-container {
 		margin: 0;
-		width: 100%;
+		width: 55%;
 	}
 
 	.text-container {
 		text-align: left;
-		width: 100%;
+		width: 45%;
 	}
 
 	.social-container {
 		justify-self: flex-end;
 	}
 
+	.heading-primary {
+		font-size: 2.8rem;
+	}
+
 	.btn:link {
 		width: 16rem;
+		font-size: 1.8rem;
+	}
+
+	.attribution {
+		align-self: end;
 	}
 }
 
 /* ---- ABOVE 1008px ---- */
 @media (min-width: 63em) {
-	.heading-primary {
-		font-size: 3.4rem;
+	.main {
+		gap: 6rem;
 	}
+	.heading-primary {
+		font-size: 4rem;
+	}
+
+	.btn:link {
+		width: 20rem;
+		font-size: 1.8rem;
+	}
+
+	/* .image-container {
+		width: 60%;
+	}
+
+	.text-container {
+		width: 40%;
+	} */
 }

@@ -114,28 +114,34 @@ body {
 	background: var(--icon-activity, none) top -5px right 15px no-repeat var(--clr-activity, var(--clr-header-top));
 	border-radius: var(--border-radius);
 	/* max-width: 34rem; */
+	overflow: hidden;
 }
 
 .activity--work {
 	--clr-activity: hsl(15, 100%, 70%);
 	--icon-activity: url('../images/icon-work.svg');
 }
+
 .activity--play {
 	--clr-activity: hsl(195, 74%, 62%);
 	--icon-activity: url('../images/icon-play.svg');
 }
+
 .activity--study {
 	--clr-activity: hsl(348, 100%, 68%);
 	--icon-activity: url('../images/icon-study.svg');
 }
+
 .activity--exercise {
 	--clr-activity: hsl(145, 58%, 55%);
 	--icon-activity: url('../images/icon-exercise.svg');
 }
+
 .activity--social {
 	--clr-activity: hsl(264, 64%, 52%);
 	--icon-activity: url('../images/icon-social.svg');
 }
+
 .activity--self-care {
 	--clr-activity: hsl(43, 84%, 65%);
 	--icon-activity: url('../images/icon-self-care.svg');
@@ -147,11 +153,12 @@ body {
 	border-radius: inherit;
 	padding: 2rem;
 	cursor: pointer;
-	transition: background-color 0.3s;
+	transition: background-color 0.3s, transform 0.4s;
 }
 
 .activity__content:hover {
 	background-color: var(--clr-card-hover);
+	transform: translateY(0.4rem);
 }
 
 .activity__name {

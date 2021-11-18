@@ -153,12 +153,16 @@ body {
 	border-radius: inherit;
 	padding: 2rem;
 	cursor: pointer;
-	transition: background-color 0.3s, transform 0.4s;
+	transition: background-color 0.3s, transform 0.2s ease-out;
 }
 
 .activity__content:hover {
 	background-color: var(--clr-card-hover);
 	transform: translateY(0.4rem);
+}
+
+.activity--loading .activity__content {
+	transform: translateY(100%);
 }
 
 .activity__name {
@@ -173,7 +177,7 @@ body {
 	font-weight: 300;
 }
 
-.activity__previous-hours {
+.activity__previous {
 	color: var(--clr-text-light);
 	font-weight: 400;
 	font-size: 1.4rem;

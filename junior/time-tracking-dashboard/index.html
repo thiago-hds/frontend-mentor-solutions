@@ -18,7 +18,8 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="styles/style.css" />
-		<script defer src="scripts/script.js"></script>
+		<!-- <script defer src="scripts/script.js"></script> -->
+		<script type="module" src="scripts/controller.js"></script>
 		<title>Frontend Mentor | Time tracking dashboard</title>
 	</head>
 	<body>
@@ -60,6 +61,10 @@
 						</li>
 					</ul>
 				</header>
+				<section class="loading-status">
+					<div class="spinner"></div>
+					<p class="loading-status__text">Loading</p>
+				</section>
 			</article>
 		</main>
 

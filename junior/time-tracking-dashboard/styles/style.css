@@ -28,6 +28,10 @@ body {
 	background: var(--clr-bg-body);
 }
 
+/* main {
+	position: relative;
+} */
+
 .container {
 	width: 90%;
 	margin: 0 auto;
@@ -42,6 +46,10 @@ body {
 
 .mb-sm {
 	margin-bottom: 1rem;
+}
+
+.hidden {
+	visibility: hidden;
 }
 
 .button {
@@ -147,6 +155,7 @@ body {
 	--icon-activity: url('../images/icon-self-care.svg');
 }
 
+/* ----  ACTIVITY STYLES ---- */
 .activity__content {
 	background: var(--clr-card);
 	margin-top: 3.5rem;
@@ -162,7 +171,7 @@ body {
 }
 
 .activity--loading .activity__content {
-	transform: translateY(100%);
+	transform: translateY(80%);
 }
 
 .activity__name {
@@ -198,7 +207,49 @@ body {
 	text-decoration: none;
 	border-bottom: 1px solid currentColor;
 }
+/* ---- LOADING STATUS STYLES ---- */
+.loading-status {
+	/* grid-column: -1 / 1; */
+	position: absolute;
+	inset: 0;
+	display: grid;
+	gap: 1rem;
+	grid-template-rows: auto auto;
+	align-content: center;
+	justify-items: center;
+	background: var(--clr-bg-body);
+	transition: visibility 0.3s ease-in;
+}
 
+.spinner {
+	border: 5px solid var(--clr-header-top);
+	border-bottom-color: transparent;
+	padding: 5px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loading-status__text {
+	color: var(--clr-text-white);
+	font-weight: 400;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+/* ---- MEDIA QUERIES ---- */
+
+/* TODO use rems */
 @media (min-width: 734px) {
 	.mb-sm {
 		margin-bottom: 2rem;
@@ -259,4 +310,9 @@ body {
 		gap: 1.4rem;
 		justify-content: space-between;
 	}
+
+	/* .loading-status {
+		grid-column: 2 / -1;
+		grid-row: span 2;
+	} */
 }

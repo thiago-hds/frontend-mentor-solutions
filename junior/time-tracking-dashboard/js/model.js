@@ -13,7 +13,6 @@ export const fetchActivities = async function () {
 		const res = await fetch(DATA_URL);
 		state.activities = await res.json();
 	} catch (err) {
-		console.err(err);
-		throw err;
+		console.error(err);
 	}
 };

@@ -208,8 +208,7 @@ body {
 	border-bottom: 1px solid currentColor;
 }
 /* ---- LOADING STATUS STYLES ---- */
-.loading-status {
-	/* grid-column: -1 / 1; */
+.loading-overlay {
 	position: absolute;
 	inset: 0;
 	display: grid;
@@ -240,7 +239,7 @@ body {
 	}
 }
 
-.loading-status__text {
+.loading-overlay__text {
 	color: var(--clr-text-white);
 	font-weight: 400;
 	font-size: 1.8rem;
@@ -310,9 +309,4 @@ body {
 		gap: 1.4rem;
 		justify-content: space-between;
 	}
-
-	/* .loading-status {
-		grid-column: 2 / -1;
-		grid-row: span 2;
-	} */
 }

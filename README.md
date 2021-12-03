@@ -10,6 +10,15 @@ Frontend Mentor Profile: [@thiago-hds](https://www.frontendmentor.io/profile/thi
 
 ## Challenges
 
+### Level 2: Junior
+
+<!-- prettier-ignore-start -->
+| Challenge | Solution URL | Code  | Live URL |
+|---|---|---|---|
+| **[Time tracking dashboard](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw)** | [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/time-tracking-dashboard-css-grid-vanilla-js-H6eF4M_0E) | [Repository](./junior/time-tracking-dashboard) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/junior/time-tracking-dashboard/) |
+<!-- |  |  |  |  | -->
+<!-- prettier-ignore-end -->
+
 ### Level 1: Newbie
 
 <!-- prettier-ignore-start -->
@@ -28,5 +37,4 @@ Frontend Mentor Profile: [@thiago-hds](https://www.frontendmentor.io/profile/thi
 | **[Single price grid component](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc/hub/single-price-grid-component-css-grid-flexbox-2t-ERMWgG)** | [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/single-price-grid-component-css-grid-flexbox-2t-ERMWgG) | [Repository](./newbie/single-price-grid-component) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/single-price-grid-component/) |
 | **[Ping single column coming soon page](https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da/hub/ping-single-column-coming-soon-page-sFhq_neWf)** | [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/ping-single-column-coming-soon-page-html-css-js-84ULxl5TP) | [Repository](./newbie/ping-coming-soon-page) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/ping-coming-soon-page) |
 | **[Huddle landing page with a single introductory section](https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0)** | [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/huddle-landing-page-html-css-grid-flexbox-STQ4kX3o-) | [Repository](./newbie/huddle-landing-page-with-single-introductory-section) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/newbie/huddle-landing-page-with-single-introductory-section/) |
-<!-- |  |  |  |  | -->
 <!-- prettier-ignore-end -->

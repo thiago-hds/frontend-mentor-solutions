@@ -33,16 +33,16 @@ class DashboardView {
 		);
 	}
 
-	toggleActivitiesUpdating() {
+	toggleActivitiesUpdatingState() {
 		this._activities.forEach(activity =>
-			activityView.toggleUpdating(activity)
+			activityView.toggleUpdatingState(activity)
 		);
 	}
 
 	deactivateTimeframeButtons() {
-		this.timeframeButtonsEl.forEach(btn =>
-			btn.classList.remove('button--active')
-		);
+		this.timeframeButtonsEl.forEach(btn => {
+			btn.classList.remove('button--active');
+		});
 	}
 
 	activateCurrentTimeframeButton(timeframe) {
@@ -52,6 +52,9 @@ class DashboardView {
 		btn.classList.add('button--active');
 	}
 
+	/**
+	 * Adds a handler that is invoked when user clicks on one of the timeframes buttons.
+	 */
 	addHandlerTimeframeClick(handler) {
 		this.timeframesListEl.addEventListener('click', function (e) {
 			if (!e.target.matches('.button')) return;
@@ -62,7 +65,11 @@ class DashboardView {
 		});
 	}
 
-	addHandlerActivityContentTransformEnd(handler) {
+	/**
+	 * Adds a handler that is invoked when the activities transitions have finished
+	 * and their content can be updated.
+	 */
+	addHandlerActivityCanBeUpdated(handler) {
 		this.dashboardEl.addEventListener('transitionend', function (e) {
 			if (!e.target.matches('.activity__content')) return;
 			if (e.propertyName !== 'transform') return;

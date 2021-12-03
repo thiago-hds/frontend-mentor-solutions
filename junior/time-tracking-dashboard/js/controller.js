@@ -6,7 +6,7 @@ const changeCurrentTimeframe = function (timeframe) {
 	model.state.currentTimeframe = timeframe;
 
 	dashboardView.deactivateTimeframeButtons();
-	dashboardView.toggleActivitiesUpdating();
+	dashboardView.toggleActivitiesUpdatingState();
 };
 
 const updateActivity = function () {
@@ -15,14 +15,15 @@ const updateActivity = function () {
 	const { currentTimeframe } = model.state;
 
 	dashboardView.update(currentTimeframe);
-	dashboardView.toggleActivitiesUpdating();
+	dashboardView.toggleActivitiesUpdatingState();
 	dashboardView.activateCurrentTimeframeButton(currentTimeframe);
+
 	model.state.isUpdating = false;
 };
 
 const init = async function () {
 	dashboardView.addHandlerTimeframeClick(changeCurrentTimeframe);
-	dashboardView.addHandlerActivityContentTransformEnd(updateActivity);
+	dashboardView.addHandlerActivityCanBeUpdated(updateActivity);
 
 	await model.fetchActivities();
 	const { activities, currentTimeframe } = model.state;

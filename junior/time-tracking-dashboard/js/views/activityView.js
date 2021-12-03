@@ -25,9 +25,9 @@ class ActivityView {
 		previousHoursEl.textContent = `${hours.previous}hrs`;
 	}
 
-	toggleUpdating(activity) {
+	toggleUpdatingState(activity) {
 		const activityEl = this._getActivityElement(activity);
-		activityEl.classList.toggle('activity--loading');
+		activityEl.classList.toggle('activity--updating');
 	}
 
 	_getActivityElement({ title }) {
@@ -47,7 +47,7 @@ class ActivityView {
             <div class="activity__content">
                 <div class="card-row mb-sm">
                     <h2 class="activity__name">${title}</h2>
-                    <button class="button">
+                    <button class="button" aria-label="more information">
                         <img src="images/icon-ellipsis.svg" alt="" />
                     </button>
                 </div>

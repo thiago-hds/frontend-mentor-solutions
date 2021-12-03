@@ -1,3 +1,4 @@
+/* ---- GENERAL STYLES ---- */
 *,
 *::before,
 *::after {
@@ -27,10 +28,6 @@ body {
 	min-height: 100vh;
 	background: var(--clr-bg-body);
 }
-
-/* main {
-	position: relative;
-} */
 
 .container {
 	width: 90%;
@@ -66,6 +63,7 @@ body {
 	color: var(--clr-text-white);
 }
 
+/* ---- DASHBOARD STYLES ---- */
 .dashboard {
 	margin-top: 2rem;
 	display: grid;
@@ -116,12 +114,12 @@ body {
 	justify-content: space-around;
 }
 
+/* ---- ACTIVITY STYLES ---- */
 .activity {
 	display: grid;
 	align-items: end;
 	background: var(--icon-activity, none) top -5px right 15px no-repeat var(--clr-activity, var(--clr-header-top));
 	border-radius: var(--border-radius);
-	/* max-width: 34rem; */
 	overflow: hidden;
 }
 
@@ -155,7 +153,6 @@ body {
 	--icon-activity: url('../images/icon-self-care.svg');
 }
 
-/* ----  ACTIVITY STYLES ---- */
 .activity__content {
 	background: var(--clr-card);
 	margin-top: 3.5rem;
@@ -170,7 +167,7 @@ body {
 	transform: translateY(0.4rem);
 }
 
-.activity--loading .activity__content {
+.activity--updating .activity__content {
 	transform: translateY(80%);
 }
 
@@ -207,7 +204,8 @@ body {
 	text-decoration: none;
 	border-bottom: 1px solid currentColor;
 }
-/* ---- LOADING STATUS STYLES ---- */
+
+/* ---- LOADING OVERLAY STYLES ---- */
 .loading-overlay {
 	position: absolute;
 	inset: 0;
@@ -248,8 +246,8 @@ body {
 
 /* ---- MEDIA QUERIES ---- */
 
-/* TODO use rems */
-@media (min-width: 734px) {
+/* ABOVE 734px */
+@media (min-width: 45.875rem) {
 	.mb-sm {
 		margin-bottom: 2rem;
 	}
@@ -283,7 +281,8 @@ body {
 	}
 }
 
-@media (min-width: 1156px) {
+/* ABOVE 1156px */
+@media (min-width: 72.25rem) {
 	body {
 		display: grid;
 		grid-template-rows: 1fr auto;

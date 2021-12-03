@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
+-   Solution URL: [https://www.frontendmentor.io/solutions/time-tracking-dashboard-css-grid-vanilla-js-H6eF4M_0E](https://www.frontendmentor.io/solutions/time-tracking-dashboard-css-grid-vanilla-js-H6eF4M_0E)
 -   Live Site URL: [https://thiago-hds.github.io/frontend-mentor-solutions/junior/time-tracking-dashboard/](https://thiago-hds.github.io/frontend-mentor-solutions/junior/time-tracking-dashboard/)
 
 ## My process

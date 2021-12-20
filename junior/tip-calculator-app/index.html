@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Tip calculator app</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="h1 heading">Spli<br />tter</div>
+		</header>
+		<div class="calculator">
+			<div class="calculator__inputs">
+				<div class="input-group">
+					<label for="bill" class="input-label">Bill</label>
+					<input type="number" name="bill" id="bill" />
+				</div>
+				<div class="input-group">
+					<label class="input-label">Select Tip %</label>
+					<div class="tips-container">
+						<button class="button">5%</button>
+						<button class="button">10%</button>
+						<button class="button">15%</button>
+						<button class="button">25%</button>
+						<button class="button">50%</button>
+						<input
+							type="number"
+							name="custom-tip"
+							id="custom-tip"
+							placeholder="Custom"
+						/>
+					</div>
+				</div>
+				<div class="input-group">
+					<label for="bill" class="input-label"
+						>Number of People</label
+					>
+					<input
+						type="number"
+						name="number-of-people"
+						id="number-of-people"
+					/>
+				</div>
+			</div>
+			<div class="calculator-results">
+				<div class="result">
+					<div class="result__label">Tip Amount</div>
+					<div class="result__info">/ person</div>
+					<div class="result__value">$0.00</div>
+				</div>
+				<div class="result">
+					<div class="result__label">Total</div>
+					<div class="result__info">/ person</div>
+					<div class="result__value">$0.00</div>
+				</div>
+				<button class="button">Reset</button>
+			</div>
+		</div>
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="https://github.com/thiago-hds">Thiago Santos</a>.
+		</div>
+	</body>
+</html>

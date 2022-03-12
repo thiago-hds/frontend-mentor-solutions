@@ -19,6 +19,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="styles/style.css" />
+		<script defer src="./scritps/script.js"></script>
 
 		<title>Frontend Mentor | Tip calculator app</title>
 	</head>
@@ -32,14 +33,16 @@
 					<div class="input-group">
 						<div class="flex justify-between">
 							<label for="bill" class="input-label">Bill</label>
-							<div class="input-error">Can't be zero</div>
+							<div class="input-error"></div>
 						</div>
 						<input
 							type="number"
-							class="input input--invalid"
+							class="input"
 							name="bill"
 							id="bill"
 							min="0"
+							max="10000000"
+							placeholder="0"
 						/>
 						<div class="input-icon input-icon--dollar"></div>
 					</div>
@@ -49,18 +52,29 @@
 							<div class="input-error hidden"></div>
 						</div>
 						<div class="tips-container">
-							<button class="button button--tip button--active">
+							<button
+								class="button button--tip button--active"
+								data-tip="5"
+							>
 								5%
 							</button>
-							<button class="button button--tip">10%</button>
-							<button class="button button--tip">15%</button>
-							<button class="button button--tip">25%</button>
-							<button class="button button--tip">50%</button>
+							<button class="button button--tip" data-tip="10">
+								10%
+							</button>
+							<button class="button button--tip" data-tip="15">
+								15%
+							</button>
+							<button class="button button--tip" data-tip="25">
+								25%
+							</button>
+							<button class="button button--tip" data-tip="50">
+								50%
+							</button>
 							<input
 								type="number"
 								class="input"
-								name="custom-tip"
-								id="custom-tip"
+								name="tip"
+								id="tip"
 								placeholder="Custom"
 								min="0"
 								max="100"
@@ -79,9 +93,11 @@
 						<input
 							class="input"
 							type="number"
-							name="number-of-people"
+							name="numberOfPeople"
 							id="number-of-people"
 							min="1"
+							value="1"
+							placeholder="0"
 						/>
 						<div class="input-icon input-icon--person"></div>
 					</div>
@@ -94,16 +110,19 @@
 							<p class="result__description">Tip Amount</p>
 							<p class="result__info">/ person</p>
 						</div>
-						<div class="result__value">$0.00</div>
+						<div id="tip-amount" class="result__value">$0.00</div>
 					</div>
 					<div class="result">
 						<div class="result__label">
 							<p class="result__description">Total</p>
 							<p class="result__info">/ person</p>
 						</div>
-						<div class="result__value">$0.00</div>
+						<div id="total" class="result__value">$0.00</div>
 					</div>
-					<button class="button button--active button-reset">
+					<button
+						id="reset"
+						class="button button--active button-reset"
+					>
 						Reset
 					</button>
 				</div>

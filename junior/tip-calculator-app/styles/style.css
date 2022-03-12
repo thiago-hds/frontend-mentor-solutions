@@ -99,13 +99,17 @@ input[type='number'] {
 	border-radius: 6px;
 	color: var(--very-dark-cyan);
 	text-align: right;
+	outline: none;
+	border: 2px solid transparent;
 }
 
 .input:focus {
-	outline: 2px solid var(--strong-cyan);
+	/* outline: 2px solid var(--strong-cyan); */
+
+	border: 2px solid var(--strong-cyan);
 }
 
-.input--invalid {
+.input--invalid.input--invalid {
 	border: 2px solid var(--red);
 }
 
@@ -237,7 +241,7 @@ input[type='number'] {
 	.calculator {
 		display: flex;
 		padding: 1.6rem;
-		max-width: 55rem;
+		max-width: 62rem;
 	}
 
 	.calculator__inputs,

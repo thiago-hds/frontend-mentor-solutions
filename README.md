@@ -15,6 +15,7 @@ Frontend Mentor Profile: [@thiago-hds](https://www.frontendmentor.io/profile/thi
 <!-- prettier-ignore-start -->
 | Challenge | Solution URL | Code  | Live URL |
 |---|---|---|---|
+| **[Tip calculator app (ongoing)](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)** | [Frontend Mentor Solution]() | [Repository](./junior/tip-calculator-app) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/junior/tip-calculator-app/) |
 | **[Time tracking dashboard](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw)** | [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/time-tracking-dashboard-css-grid-vanilla-js-H6eF4M_0E) | [Repository](./junior/time-tracking-dashboard) | [Live Solution](https://thiago-hds.github.io/frontend-mentor-solutions/junior/time-tracking-dashboard/) |
 <!-- |  |  |  |  | -->
 <!-- prettier-ignore-end -->

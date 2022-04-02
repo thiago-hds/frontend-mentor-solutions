@@ -1,4 +1,4 @@
-import model from './model.js';
+import * as model from './model.js';
 import view from './view.js';
 
 const validationRules = {
@@ -23,10 +23,11 @@ function onFieldUpdated(fieldName, fieldValue) {
 	const error = validateField(fieldName, value);
 	if (error) {
 		view.setFieldError(fieldName, error);
+		view.updateResults(0, 0);
 		return;
 	}
-	view.setFieldError(fieldName, null);
-	model[fieldName] = value;
+	view.removeFieldError(fieldName);
+	model.state[fieldName] = value;
 	updateResults();
 }
 
@@ -36,12 +37,14 @@ function updateResults() {
 }
 
 function calculateResults() {
-	const tipAmount = (model.tip / 100) * model.bill;
-	const tipAmountPerPerson = tipAmount / model.numberOfPeople;
-	const totalPerPerson = (model.bill + tipAmount) / model.numberOfPeople;
+	const { tip, bill, numberOfPeople } = model.state;
 
-	model.tipAmountPerPerson = tipAmountPerPerson;
-	model.totalPerPerson = totalPerPerson;
+	const tipAmount = (tip / 100) * bill;
+	const tipAmountPerPerson = tipAmount / numberOfPeople;
+	const totalPerPerson = (bill + tipAmount) / numberOfPeople;
+
+	model.state.tipAmountPerPerson = tipAmountPerPerson;
+	model.state.totalPerPerson = totalPerPerson;
 
 	return { tipAmountPerPerson, totalPerPerson };
 }

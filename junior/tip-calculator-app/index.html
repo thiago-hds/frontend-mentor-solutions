@@ -33,25 +33,40 @@
 					<div class="input-group">
 						<div class="flex justify-between">
 							<label for="bill" class="input-label">Bill</label>
-							<div class="input-error"></div>
+							<div
+								id="bill-error"
+								class="input-error"
+								aria-live="assertive"
+							></div>
 						</div>
 						<input
 							type="number"
 							class="input"
 							name="bill"
 							id="bill"
-							min="0"
-							max="10000000"
 							placeholder="0"
 						/>
-						<div class="input-icon input-icon--dollar"></div>
+						<div
+							aria-hidden="true"
+							class="input-icon input-icon--dollar"
+						></div>
 					</div>
 					<div class="input-group">
 						<div class="flex justify-between">
-							<label class="input-label">Select Tip %</label>
-							<div class="input-error hidden"></div>
+							<label id="tip-label" class="input-label">
+								Select Tip %
+							</label>
+							<div
+								id="tip-error"
+								class="input-error hidden"
+								aria-live="assertive"
+							></div>
 						</div>
-						<div class="tips-container">
+						<div
+							class="tips-container"
+							role="group"
+							aria-labelledby="tip-label"
+						>
 							<button
 								class="button button--tip button--active"
 								data-tip="5"
@@ -71,13 +86,12 @@
 								50%
 							</button>
 							<input
+								aria-label="custom"
 								type="number"
 								class="input"
 								name="tip"
 								id="tip"
 								placeholder="Custom"
-								min="0"
-								max="100"
 							/>
 						</div>
 					</div>
@@ -85,37 +99,46 @@
 						class="input-group input-group--text-field input-group--person"
 					>
 						<div class="flex justify-between">
-							<label for="bill" class="input-label"
+							<label for="number-of-people" class="input-label"
 								>Number of People</label
 							>
-							<div class="input-error hidden"></div>
+							<div
+								id="number-of-people-error"
+								class="input-error hidden"
+								aria-live="assertive"
+							></div>
 						</div>
 						<input
 							class="input"
 							type="number"
 							name="numberOfPeople"
 							id="number-of-people"
-							min="1"
-							value="1"
 							placeholder="0"
 						/>
-						<div class="input-icon input-icon--person"></div>
+						<div
+							aria-hidden="true"
+							class="input-icon input-icon--person"
+						></div>
 					</div>
 				</div>
 			</div>
 			<div class="calculator__results">
-				<div class="container h-100 flex flex-column">
+				<div
+					class="container h-100 flex flex-column"
+					aria-live="polite"
+					aria-atomic="true"
+				>
 					<div class="result">
 						<div class="result__label">
-							<p class="result__description">Tip Amount</p>
-							<p class="result__info">/ person</p>
+							<div class="result__description">Tip Amount</div>
+							<div class="result__info">&sol; person</div>
 						</div>
 						<div id="tip-amount" class="result__value">$0.00</div>
 					</div>
 					<div class="result">
 						<div class="result__label">
-							<p class="result__description">Total</p>
-							<p class="result__info">/ person</p>
+							<div class="result__description">Total</div>
+							<div class="result__info">&sol; person</div>
 						</div>
 						<div id="total" class="result__value">$0.00</div>
 					</div>

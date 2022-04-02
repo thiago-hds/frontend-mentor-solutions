@@ -1,19 +1,11 @@
-class Model {
-	constructor() {
-		this.bill = 0;
-		this.tip = 5;
-		this.numberOfPeople = 1;
-		this.tipAmountPerPerson = 0;
-		this.totalPerPerson = 0;
-	}
+export const state = {};
 
-	reset() {
-		this.bill = 0;
-		this.tip = 5;
-		this.numberOfPeople = 1;
-		this.tipAmountPerPerson = 0;
-		this.totalPerPerson = 0;
-	}
+export function reset() {
+	state.bill = 0;
+	state.tip = 5;
+	state.numberOfPeople = 1;
+	state.tipAmountPerPerson = 0;
+	state.totalPerPerson = 0;
 }
 
-export default new Model();
+reset();

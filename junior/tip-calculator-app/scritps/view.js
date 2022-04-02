@@ -8,27 +8,26 @@ class View {
 		this._tipAmountEl = document.querySelector('#tip-amount');
 		this._totalEl = document.querySelector('#total');
 		this._resetBtn = document.querySelector('#reset');
+		this._allInputs = [
+			this._billInput,
+			this._tipInput,
+			this._numberOfPeopleInput,
+		];
 	}
 
 	addFieldChangedHandler(handler) {
 		this._tipsButtons.forEach(btn =>
 			btn.addEventListener('click', e => {
-				this._updateSelectedTipButtonUI(e.target);
+				this._updateSelectedTipButton(e.target);
 				this._tipInput.value = '';
 				handler('tip', e.target.dataset.tip);
 			})
 		);
 
-		const allInputs = [
-			this._billInput,
-			this._tipInput,
-			this._numberOfPeopleInput,
-		];
-
-		allInputs.forEach(input =>
+		this._allInputs.forEach(input =>
 			input.addEventListener('input', e => {
 				const targetIsTipInput = e.target.id === 'tip';
-				if (targetIsTipInput) this._updateSelectedTipButtonUI(null);
+				if (targetIsTipInput) this._updateSelectedTipButton(null);
 				handler(e.target.name, e.target.value);
 			})
 		);
@@ -42,28 +41,39 @@ class View {
 	reset() {
 		this._billInput.value = '';
 		this._tipInput.value = '';
-		this._numberOfPeopleInput = 1;
+		this._numberOfPeopleInput.value = 1;
 
-		this._updateSelectedTipButtonUI(
+		this._updateSelectedTipButton(
 			this._tipsContainer.querySelector('.button[data-tip="5"]')
 		);
+
+		this._allInputs.forEach(input => this.removeFieldError(input.name));
 
 		this.updateResults(0, 0);
 	}
 
 	setFieldError(fieldName, errorMessage) {
-		const input = document.querySelector(`input[name=${fieldName}]`);
-		const errorElement = input.parentElement.querySelector('.input-error');
+		const input = this._getInputByName(fieldName);
+		const errorElement = this._getInputErrorContainer(input);
+
 		if (errorMessage) {
 			input.classList.add('input--invalid');
+			input.setAttribute('aria-invalid', 'true');
 			if (errorElement) {
 				errorElement.textContent = errorMessage;
 				errorElement.classList.remove('hidden');
+				input.setAttribute('aria-describedby', errorElement.id);
 			}
-			return;
 		}
+	}
+
+	removeFieldError(fieldName) {
+		const input = this._getInputByName(fieldName);
+		const errorElement = this._getInputErrorContainer(input);
 
 		input.classList.remove('input--invalid');
+		input.removeAttribute('aria-invalid');
+		input.removeAttribute('aria-describedby');
 		if (errorElement) {
 			errorElement.classList.add('hidden');
 			errorElement.textContent = '';
@@ -75,7 +85,15 @@ class View {
 		this._totalEl.textContent = `$${totalPerPerson.toFixed(2)}`;
 	}
 
-	_updateSelectedTipButtonUI(selectedBtn = null) {
+	_getInputByName(inputName) {
+		return document.querySelector(`input[name=${inputName}]`);
+	}
+
+	_getInputErrorContainer(input) {
+		return input.parentElement.querySelector('.input-error');
+	}
+
+	_updateSelectedTipButton(selectedBtn = null) {
 		const previousSelectedButton = this._getActiveTipButton();
 		previousSelectedButton?.classList.remove('button--active');
 		selectedBtn?.classList.add('button--active');

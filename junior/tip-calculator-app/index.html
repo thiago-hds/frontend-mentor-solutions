@@ -27,131 +27,153 @@
 		<header class="header">
 			<img class="logo" src="images/logo.svg" alt="Splitter" />
 		</header>
-		<div class="calculator">
-			<div class="calculator__inputs">
-				<div class="container flex flex-column">
-					<div class="input-group">
-						<div class="flex justify-between">
-							<label for="bill" class="input-label">Bill</label>
-							<div
-								id="bill-error"
-								class="input-error"
-								aria-live="assertive"
-							></div>
-						</div>
-						<input
-							type="number"
-							class="input"
-							name="bill"
-							id="bill"
-							placeholder="0"
-						/>
-						<div
-							aria-hidden="true"
-							class="input-icon input-icon--dollar"
-						></div>
-					</div>
-					<div class="input-group">
-						<div class="flex justify-between">
-							<label id="tip-label" class="input-label">
-								Select Tip %
-							</label>
-							<div
-								id="tip-error"
-								class="input-error hidden"
-								aria-live="assertive"
-							></div>
-						</div>
-						<div
-							class="tips-container"
-							role="group"
-							aria-labelledby="tip-label"
-						>
-							<button
-								class="button button--tip button--active"
-								data-tip="5"
-							>
-								5%
-							</button>
-							<button class="button button--tip" data-tip="10">
-								10%
-							</button>
-							<button class="button button--tip" data-tip="15">
-								15%
-							</button>
-							<button class="button button--tip" data-tip="25">
-								25%
-							</button>
-							<button class="button button--tip" data-tip="50">
-								50%
-							</button>
+		<main>
+			<div class="calculator">
+				<div class="calculator__inputs">
+					<div class="container flex flex-column">
+						<div class="input-group">
+							<div class="flex justify-between">
+								<label for="bill" class="input-label"
+									>Bill</label
+								>
+								<div
+									id="bill-error"
+									class="input-error"
+									aria-live="assertive"
+								></div>
+							</div>
 							<input
-								aria-label="custom"
 								type="number"
 								class="input"
-								name="tip"
-								id="tip"
-								placeholder="Custom"
+								name="bill"
+								id="bill"
+								placeholder="0"
 							/>
-						</div>
-					</div>
-					<div
-						class="input-group input-group--text-field input-group--person"
-					>
-						<div class="flex justify-between">
-							<label for="number-of-people" class="input-label"
-								>Number of People</label
-							>
 							<div
-								id="number-of-people-error"
-								class="input-error hidden"
-								aria-live="assertive"
+								aria-hidden="true"
+								class="input-icon input-icon--dollar"
 							></div>
 						</div>
-						<input
-							class="input"
-							type="number"
-							name="numberOfPeople"
-							id="number-of-people"
-							placeholder="0"
-						/>
+						<div class="input-group">
+							<div class="flex justify-between">
+								<label id="tip-label" class="input-label">
+									Select Tip %
+								</label>
+								<div
+									id="tip-error"
+									class="input-error hidden"
+									aria-live="assertive"
+								></div>
+							</div>
+							<div
+								class="tips-container"
+								role="group"
+								aria-labelledby="tip-label"
+							>
+								<button
+									class="button button--tip button--active"
+									data-tip="5"
+								>
+									5%
+								</button>
+								<button
+									class="button button--tip"
+									data-tip="10"
+								>
+									10%
+								</button>
+								<button
+									class="button button--tip"
+									data-tip="15"
+								>
+									15%
+								</button>
+								<button
+									class="button button--tip"
+									data-tip="25"
+								>
+									25%
+								</button>
+								<button
+									class="button button--tip"
+									data-tip="50"
+								>
+									50%
+								</button>
+								<input
+									aria-label="custom"
+									type="number"
+									class="input"
+									name="tip"
+									id="tip"
+									placeholder="Custom"
+								/>
+							</div>
+						</div>
 						<div
-							aria-hidden="true"
-							class="input-icon input-icon--person"
-						></div>
+							class="input-group input-group--text-field input-group--person"
+						>
+							<div class="flex justify-between">
+								<label
+									for="number-of-people"
+									class="input-label"
+									>Number of People</label
+								>
+								<div
+									id="number-of-people-error"
+									class="input-error hidden"
+									aria-live="assertive"
+								></div>
+							</div>
+							<input
+								class="input"
+								type="number"
+								name="numberOfPeople"
+								id="number-of-people"
+								placeholder="0"
+							/>
+							<div
+								aria-hidden="true"
+								class="input-icon input-icon--person"
+							></div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="calculator__results">
-				<div
-					class="container h-100 flex flex-column"
-					aria-live="polite"
-					aria-atomic="true"
-				>
-					<div class="result">
-						<div class="result__label">
-							<div class="result__description">Tip Amount</div>
-							<div class="result__info">&sol; person</div>
-						</div>
-						<div id="tip-amount" class="result__value">$0.00</div>
-					</div>
-					<div class="result">
-						<div class="result__label">
-							<div class="result__description">Total</div>
-							<div class="result__info">&sol; person</div>
-						</div>
-						<div id="total" class="result__value">$0.00</div>
-					</div>
-					<button
-						id="reset"
-						class="button button--active button-reset"
+				<div class="calculator__results">
+					<div
+						class="container h-100 flex flex-column"
+						aria-live="polite"
+						aria-atomic="true"
 					>
-						Reset
-					</button>
+						<div class="result">
+							<div class="result__label">
+								<div class="result__description">
+									Tip Amount
+								</div>
+								<div class="result__info">&sol; person</div>
+							</div>
+							<div id="tip-amount" class="result__value">
+								$0.00
+							</div>
+						</div>
+						<div class="result">
+							<div class="result__label">
+								<div class="result__description">Total</div>
+								<div class="result__info">&sol; person</div>
+							</div>
+							<div id="total" class="result__value">$0.00</div>
+						</div>
+						<button
+							id="reset"
+							class="button button--active button-reset"
+						>
+							Reset
+						</button>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="attribution">
+		</main>
+		<footer class="attribution">
 			Challenge by
 			<a
 				class="attribution__link"
@@ -162,6 +184,6 @@
 			<a class="attribution__link" href="https://github.com/thiago-hds"
 				>Thiago Santos</a
 			>.
-		</div>
+		</footer>
 	</body>
 </html>

@@ -223,6 +223,11 @@ input[type='number'] {
 
 /* ABOVE 1040px */
 @media screen and (min-width: 65em) {
+	body {
+		display: grid;
+		align-content: center;
+		min-height: 100vh;
+	}
 	.container {
 		padding: 2rem;
 	}

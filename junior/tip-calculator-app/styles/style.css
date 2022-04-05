@@ -147,6 +147,7 @@ input[type='number'] {
 
 .header {
 	padding: 2rem;
+	padding-bottom: 6.5rem;
 }
 
 .logo {
@@ -159,6 +160,7 @@ input[type='number'] {
 	border-radius: 15px;
 	max-width: 30rem;
 	margin: 0 auto;
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
 }
 
 .tips-container {
@@ -206,7 +208,7 @@ input[type='number'] {
 	font-size: 11px;
 	color: var(--very-dark-cyan);
 	text-align: center;
-	padding: 1rem 0;
+	padding: 1rem;
 }
 
 .attribution__link:link,
@@ -237,9 +239,12 @@ input[type='number'] {
 		max-width: 64rem;
 	}
 
-	.calculator__inputs,
+	.calculator__inputs {
+		flex: 1;
+	}
+
 	.calculator__results {
-		width: 50%;
+		width: 45%;
 	}
 
 	.tips-container {
@@ -252,5 +257,9 @@ input[type='number'] {
 
 	.result__value {
 		font-size: 3rem;
+	}
+
+	.attribution {
+		padding: 2rem;
 	}
 }

@@ -4,11 +4,11 @@ import view from './view.js';
 const validationRules = {
 	bill: {
 		min: 0,
-		max: 10000000,
+		max: 100000,
 	},
 	tip: {
 		min: 0,
-		max: 200,
+		max: 100,
 	},
 	numberOfPeople: {
 		min: 1,
@@ -33,6 +33,8 @@ function onFieldUpdated(fieldName, fieldValue) {
 
 function updateResults() {
 	const { tipAmountPerPerson, totalPerPerson } = calculateResults();
+	model.state.tipAmountPerPerson = tipAmountPerPerson;
+	model.state.totalPerPerson = totalPerPerson;
 	view.updateResults(tipAmountPerPerson, totalPerPerson);
 }
 
@@ -42,9 +44,6 @@ function calculateResults() {
 	const tipAmount = (tip / 100) * bill;
 	const tipAmountPerPerson = tipAmount / numberOfPeople;
 	const totalPerPerson = (bill + tipAmount) / numberOfPeople;
-
-	model.state.tipAmountPerPerson = tipAmountPerPerson;
-	model.state.totalPerPerson = totalPerPerson;
 
 	return { tipAmountPerPerson, totalPerPerson };
 }

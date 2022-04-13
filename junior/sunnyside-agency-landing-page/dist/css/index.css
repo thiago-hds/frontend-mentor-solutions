@@ -10,10 +10,10 @@ html {
 }
 
 body {
-  color: hsl(210deg, 4%, 67%);
+  color: hsl(232deg, 10%, 55%);
   font-family: "Barlow", sans-serif;
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.6;
 }
 
@@ -84,8 +84,8 @@ img {
 }
 
 .header {
-  min-height: 60rem;
-  padding-top: 2rem;
+  padding-top: 4rem;
+  aspect-ratio: 1/1.4;
   background-image: url("../../images/mobile/image-header.jpg");
   background-size: cover;
   background-position: bottom;
@@ -103,8 +103,58 @@ img {
   letter-spacing: 0.6rem;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 3.6rem;
+  font-size: 4rem;
   color: hsl(0deg, 0%, 100%);
   text-align: center;
   margin-bottom: 6rem;
+  line-height: 1.2;
+}
+
+.feature__text {
+  text-align: center;
+  padding-block: 6rem;
+}
+
+.feature__heading {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+  font-size: 3.4rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.feature__description {
+  margin-bottom: 2rem;
+}
+
+.feature__link:link,
+.feature__link:visited {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: hsl(212deg, 27%, 19%);
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.feature__link span {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.feature__link span::after {
+  content: "";
+  height: 10px;
+  width: 115%;
+  margin-top: -10px;
+  background-color: hsl(7deg, 99%, 70%);
+  border-radius: 5px;
+  display: block;
+  z-index: -100;
+  opacity: 0.3;
+}
+
+.feature__link:hover span::after {
+  opacity: 1;
 }

@@ -163,3 +163,34 @@ $sizes: (
         opacity: 1;
     }
 }
+
+// SERVICE
+.service {
+    position: relative;
+}
+
+.service__text {
+    width: 100%;
+    position: absolute;
+    top: 66.666%;
+    text-align: center;
+}
+
+.service__text--cyan {
+    color: $clr-dark-saturated-cyan;
+}
+.service__text--blue {
+    color: $dark-blue;
+}
+
+.service__name {
+    font-family: $font-family-fraunces;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+// TODO service__description pode ficar muito proximo do limite inferior da imagem dependendo do tamanho da tela
+.service__description {
+    // letter-spacing: 1;
+    line-height: 1.5;
+}

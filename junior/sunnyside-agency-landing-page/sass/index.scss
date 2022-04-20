@@ -40,7 +40,7 @@ img {
 }
 
 .container {
-    width: 85%;
+    width: 90%;
     margin-inline: auto;
 }
 // UTILITIES
@@ -193,4 +193,56 @@ $sizes: (
 .service__description {
     // letter-spacing: 1;
     line-height: 1.5;
+}
+
+.testimonials {
+    text-align: center;
+    padding-bottom: 2.4rem;
+}
+
+.testimonials__heading {
+    text-transform: uppercase;
+    color: $clr-grayish-blue;
+    font-family: $font-family-fraunces;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    margin-block: 6rem;
+}
+
+.testimonials__list {
+    padding: 0;
+}
+
+.testimonial {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.testimonial__img {
+    margin-inline: auto;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    margin-bottom: 3.2rem;
+}
+
+.testimonial__text {
+    color: $clr-very-dark-grayish-blue;
+    line-height: 1.8;
+    font-size: 1.9rem;
+    margin-bottom: 2.6rem;
+}
+
+.testimonial__author {
+    font-family: $font-family-fraunces;
+    display: block;
+    font-weight: 900;
+    color: $clr-vary-desaturated-blue;
+}
+
+.testimonial__role {
+    font-size: 1.4rem;
+    color: $clr-grayish-blue;
 }

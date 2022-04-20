@@ -23,7 +23,7 @@ img {
 }
 
 .container {
-  width: 85%;
+  width: 90%;
   margin-inline: auto;
 }
 
@@ -157,4 +157,85 @@ img {
 
 .feature__link:hover span::after {
   opacity: 1;
+}
+
+.service {
+  position: relative;
+}
+
+.service__text {
+  width: 100%;
+  position: absolute;
+  top: 66.666%;
+  text-align: center;
+}
+
+.service__text--cyan {
+  color: hsl(167deg, 40%, 24%);
+}
+
+.service__text--blue {
+  color: hsl(198deg, 62%, 26%);
+}
+
+.service__name {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.service__description {
+  line-height: 1.5;
+}
+
+.testimonials {
+  text-align: center;
+  padding-bottom: 2.4rem;
+}
+
+.testimonials__heading {
+  text-transform: uppercase;
+  color: hsl(210deg, 4%, 67%);
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  margin-block: 6rem;
+}
+
+.testimonials__list {
+  padding: 0;
+}
+
+.testimonial {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.testimonial__img {
+  margin-inline: auto;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+
+.testimonial__text {
+  color: hsl(213deg, 9%, 39%);
+  line-height: 1.8;
+  font-size: 1.9rem;
+  margin-bottom: 2.6rem;
+}
+
+.testimonial__author {
+  font-family: "Fraunces", serif;
+  display: block;
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+}
+
+.testimonial__role {
+  font-size: 1.4rem;
+  color: hsl(210deg, 4%, 67%);
 }

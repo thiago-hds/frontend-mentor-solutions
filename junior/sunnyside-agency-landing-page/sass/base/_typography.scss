@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+
+h2 {
+    font-family: $font-fraunces;
+    font-weight: 900;
+    color: $clr-very-desaturated-blue;
+    line-height: 1.2;
+}

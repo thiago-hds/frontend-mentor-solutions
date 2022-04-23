@@ -1,0 +1,218 @@
+@use "./base";
+
+// HEADER
+
+// .header {
+//     padding-top: 4rem;
+//     aspect-ratio: 1 / 1.4;
+
+//     background-image: url("../../images/mobile/image-header.jpg");
+//     background-size: cover;
+//     background-position: bottom;
+//     background-repeat: no-repeat;
+// }
+
+// .btn-menu {
+//     background: none;
+//     border: none;
+//     cursor: pointer;
+// }
+
+// .slogan {
+//     font-family: $font-family-fraunces;
+//     letter-spacing: 0.6rem;
+//     font-weight: 900;
+//     text-transform: uppercase;
+//     font-size: 4rem;
+//     color: $clr-white;
+//     text-align: center;
+//     margin-bottom: 6rem;
+//     line-height: 1.2;
+// }
+
+// FEATURE
+.feature__text {
+    text-align: center;
+    padding-block: 6rem;
+}
+
+.feature__heading {
+    font-family: $font-family-fraunces;
+    font-weight: 900;
+    color: $clr-vary-desaturated-blue;
+    font-size: 3.4rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.feature__description {
+    margin-bottom: 2rem;
+}
+
+// .feature__link:link,
+// .feature__link:visited {
+//     font-family: $font-family-fraunces;
+//     font-weight: 900;
+//     text-transform: uppercase;
+//     color: $clr-vary-desaturated-blue;
+//     font-size: 1.6rem;
+//     text-decoration: none;
+// }
+
+// .feature__link {
+//     span {
+//         display: inline-flex;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     span::after {
+//         content: "";
+//         height: 10px;
+//         width: 115%;
+//         margin-top: -10px;
+//         background-color: $clr-soft-red;
+//         border-radius: 5px;
+//         display: block;
+//         z-index: -100;
+//         opacity: 0.3;
+//     }
+// }
+
+// .feature__link:hover {
+//     span::after {
+//         opacity: 1;
+//     }
+// }
+
+// SERVICE
+.service {
+    position: relative;
+}
+
+.service__text {
+    width: 100%;
+    position: absolute;
+    top: 66.666%;
+    text-align: center;
+}
+
+.service__text--cyan {
+    color: $clr-dark-saturated-cyan;
+}
+.service__text--blue {
+    color: $dark-blue;
+}
+
+.service__name {
+    font-family: $font-family-fraunces;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+// TODO service__description pode ficar muito proximo do limite inferior da imagem dependendo do tamanho da tela
+.service__description {
+    // letter-spacing: 1;
+    line-height: 1.5;
+}
+
+.testimonials {
+    text-align: center;
+    padding-bottom: 2.4rem;
+}
+
+.testimonials__heading {
+    text-transform: uppercase;
+    color: $clr-grayish-blue;
+    font-family: $font-family-fraunces;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    margin-block: 6rem;
+}
+
+.testimonials__list {
+    padding: 0;
+}
+
+.testimonial {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.testimonial__img {
+    margin-inline: auto;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    margin-bottom: 3.2rem;
+}
+
+.testimonial__text {
+    color: $clr-very-dark-grayish-blue;
+    line-height: 1.8;
+    font-size: 1.9rem;
+    margin-bottom: 2.6rem;
+}
+
+.testimonial__author {
+    font-family: $font-family-fraunces;
+    display: block;
+    font-weight: 900;
+    color: $clr-vary-desaturated-blue;
+}
+
+.testimonial__role {
+    font-size: 1.4rem;
+    color: $clr-grayish-blue;
+}
+
+// .footer {
+//     color: $clr-dark-saturated-cyan;
+//     background-color: $clr-dark-moderate;
+// }
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 6.4rem;
+}
+
+// .footer__logo {
+//     margin-inline: auto;
+//     height: 3rem;
+//     margin-bottom: 4.2rem;
+// }
+
+// .footer__nav-list {
+//     list-style: none;
+//     display: flex;
+//     justify-content: center;
+//     gap: 1em;
+//     padding: 0;
+//     margin-bottom: 8rem;
+// }
+
+// .footer__social {
+//     display: flex;
+//     gap: 3rem;
+//     justify-content: center;
+//     margin-bottom: 4rem;
+// }
+
+// .attribution {
+//     font-size: 1.1rem;
+//     text-align: center;
+
+//     a:link,
+//     a:visited {
+//         color: $clr-white;
+//         text-decoration: none;
+//         border-bottom: 1px solid currentColor;
+//     }
+
+//     a:active {
+//         color: $dark-blue;
+//     }
+// }

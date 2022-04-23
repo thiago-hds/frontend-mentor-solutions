@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -83,6 +84,13 @@ img {
   align-items: center;
 }
 
+h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+  line-height: 1.2;
+}
+
 .header {
   padding-top: 4rem;
   aspect-ratio: 1/1.4;
@@ -91,14 +99,12 @@ img {
   background-position: bottom;
   background-repeat: no-repeat;
 }
-
-.btn-menu {
+.header__btn-menu {
   background: none;
   border: none;
   cursor: pointer;
 }
-
-.slogan {
+.header__slogan {
   font-family: "Fraunces", serif;
   letter-spacing: 0.6rem;
   font-weight: 900;
@@ -110,26 +116,45 @@ img {
   line-height: 1.2;
 }
 
-.feature__text {
+.footer {
+  color: hsl(167deg, 40%, 24%);
+  background-color: hsl(168deg, 34%, 41%);
+}
+.footer__logo {
+  margin-inline: auto;
+  height: 3rem;
+  margin-bottom: 4.2rem;
+}
+.footer__nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 0;
+  margin-bottom: 8rem;
+}
+.footer__social {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.footer__attribution {
+  font-size: 1.1rem;
   text-align: center;
-  padding-block: 6rem;
+  padding-block: 1rem;
+}
+.footer__attribution a:link,
+.footer__attribution a:visited {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.footer__attribution a:active {
+  color: hsl(198deg, 62%, 26%);
 }
 
-.feature__heading {
-  font-family: "Fraunces", serif;
-  font-weight: 900;
-  color: hsl(212deg, 27%, 19%);
-  font-size: 3.4rem;
-  line-height: 1.2;
-  margin-bottom: 2rem;
-}
-
-.feature__description {
-  margin-bottom: 2rem;
-}
-
-.feature__link:link,
-.feature__link:visited {
+.link:link, .link:visited {
   font-family: "Fraunces", serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -137,13 +162,15 @@ img {
   font-size: 1.6rem;
   text-decoration: none;
 }
-
-.feature__link span {
+.link:hover span::after {
+  opacity: 1;
+}
+.link span {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
 }
-.feature__link span::after {
+.link span::after {
   content: "";
   height: 10px;
   width: 115%;
@@ -154,88 +181,4 @@ img {
   z-index: -100;
   opacity: 0.3;
 }
-
-.feature__link:hover span::after {
-  opacity: 1;
-}
-
-.service {
-  position: relative;
-}
-
-.service__text {
-  width: 100%;
-  position: absolute;
-  top: 66.666%;
-  text-align: center;
-}
-
-.service__text--cyan {
-  color: hsl(167deg, 40%, 24%);
-}
-
-.service__text--blue {
-  color: hsl(198deg, 62%, 26%);
-}
-
-.service__name {
-  font-family: "Fraunces", serif;
-  font-weight: 900;
-  margin-bottom: 2rem;
-}
-
-.service__description {
-  line-height: 1.5;
-}
-
-.testimonials {
-  text-align: center;
-  padding-bottom: 2.4rem;
-}
-
-.testimonials__heading {
-  text-transform: uppercase;
-  color: hsl(210deg, 4%, 67%);
-  font-family: "Fraunces", serif;
-  font-weight: 900;
-  font-size: 1.5rem;
-  letter-spacing: 5px;
-  margin-block: 6rem;
-}
-
-.testimonials__list {
-  padding: 0;
-}
-
-.testimonial {
-  list-style: none;
-  text-align: center;
-  margin-bottom: 6rem;
-}
-
-.testimonial__img {
-  margin-inline: auto;
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
-  margin-bottom: 3.2rem;
-}
-
-.testimonial__text {
-  color: hsl(213deg, 9%, 39%);
-  line-height: 1.8;
-  font-size: 1.9rem;
-  margin-bottom: 2.6rem;
-}
-
-.testimonial__author {
-  font-family: "Fraunces", serif;
-  display: block;
-  font-weight: 900;
-  color: hsl(212deg, 27%, 19%);
-}
-
-.testimonial__role {
-  font-size: 1.4rem;
-  color: hsl(210deg, 4%, 67%);
-}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,68 @@
+@use "../abstracts" as *;
+
+// GENERAL STYLES
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: $clr-dark-grayish-blue;
+
+    font-family: $font-barlow;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin-inline: auto;
+}
+
+// UTILITIES
+$sizes: (
+    "xsm": 0.4rem,
+    "sm": 1.2rem,
+    "md": 2.4rem,
+    "lg": 4.8rem,
+    "xlg": 8rem,
+);
+
+@each $description, $size in $sizes {
+    .mt-#{$description} {
+        margin-top: $size;
+    }
+
+    .mb-#{$description} {
+        margin-bottom: $size;
+    }
+}
+
+.m-inline-auto {
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
